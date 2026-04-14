@@ -989,3 +989,454 @@ function numberWithCommas(num) {
 //   });
 // });
 // ADDED BY PAB TO AUTOMATICALLY GET THE API AMOUNT ON ANY CALC
+
+
+// New JS 08/04/2026 started
+
+// Chart js
+$(document).ready(function () {
+  const customCanvasBackgroundColor = {
+    id: 'customCanvasBackgroundColor',
+    beforeDraw: (chart, args, options) => {
+        const {ctx, chartArea} = chart;
+
+        if (!chartArea) return; // prevents error on initial load
+
+        ctx.save();
+        ctx.fillStyle = options.color || '#fff';
+        ctx.fillRect(
+            chartArea.left,
+            chartArea.top,
+            chartArea.right - chartArea.left,
+            chartArea.bottom - chartArea.top
+        );
+        ctx.restore();
+    }
+  };
+
+  const ctx = document.getElementById('myChart');
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['1', '2', '3', '4', '5', '6', '7',],
+        datasets: [{
+            data: [1.1555, 1.1568, 1.1522, 1.1520, 1.1528, 1.1505, 1.1482],
+            borderColor: '#ff4d4d',
+            backgroundColor: 'rgba(255, 255, 255, 1)',
+            fill: true,
+            tension: 0.4,
+            pointRadius: 0,
+            borderWidth: 2
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: false
+            },
+            customCanvasBackgroundColor: {
+                color: '#E6F2FF'
+            }
+        },
+        scales: {
+            x: {
+                grid: {
+                    color: '#e5e5e5'
+                }
+            },
+            y: {
+                grid: {
+                    color: '#e5e5e5'
+                },
+                ticks: {
+                    callback: function(value) {
+                        return value.toFixed(4);
+                    }
+                }
+            }
+        }
+    },
+    plugins: [customCanvasBackgroundColor]
+  });
+
+  const sellTravelChart = document.getElementById('sellTravelChart');
+  new Chart(sellTravelChart, {
+    type: 'line',
+    data: {
+        labels: ['1', '2', '3', '4', '5', '6', '7',],
+        datasets: [{
+            data: [1.1555, 1.1568, 1.1522, 1.1520, 1.1528, 1.1505, 1.1482],
+            borderColor: '#ff4d4d',
+            backgroundColor: 'rgba(255, 255, 255, 1)',
+            fill: true,
+            tension: 0.4,
+            pointRadius: 0,
+            borderWidth: 2
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: false
+            },
+            customCanvasBackgroundColor: {
+                color: '#E6F2FF'
+            }
+        },
+        scales: {
+            x: {
+                grid: {
+                    color: '#e5e5e5'
+                }
+            },
+            y: {
+                grid: {
+                    color: '#e5e5e5'
+                },
+                ticks: {
+                    callback: function(value) {
+                        return value.toFixed(4);
+                    }
+                }
+            }
+        }
+    },
+    plugins: [customCanvasBackgroundColor]
+  });
+
+  const internationalTransfer = document.getElementById('internationalTransferChart');
+  new Chart(internationalTransferChart, {
+    type: 'line',
+    data: {
+        labels: ['1', '2', '3', '4', '5', '6', '7',],
+        datasets: [{
+            data: [1.1555, 1.1568, 1.1522, 1.1520, 1.1528, 1.1505, 1.1482],
+            borderColor: '#ff4d4d',
+            backgroundColor: 'rgba(255, 255, 255, 1)',
+            fill: true,
+            tension: 0.4,
+            pointRadius: 0,
+            borderWidth: 2
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: false
+            },
+            customCanvasBackgroundColor: {
+                color: '#E6F2FF'
+            }
+        },
+        scales: {
+            x: {
+                grid: {
+                    color: '#e5e5e5'
+                }
+            },
+            y: {
+                grid: {
+                    color: '#e5e5e5'
+                },
+                ticks: {
+                    callback: function(value) {
+                        return value.toFixed(4);
+                    }
+                }
+            }
+        }
+    },
+    plugins: [customCanvasBackgroundColor]
+  });
+});
+
+// Rate watch Page - tom select JS added
+
+$(document).ready(function () {
+  if ($('#BuyTravelMoney_1').length > 0) {
+    new TomSelect('#BuyTravelMoney_1', {
+      maxOptions: 300,
+      render: {
+        option: function (data, escape) {
+          return `
+          <div>
+            <img class="opt_flag" src="${data.src}" alt="${escape(data.text)}">
+            <div class="opt_name">${escape(data.text)}</div>
+          </div>`;
+        },
+        item: function (item, escape) {
+          return `
+          <div>
+            <div class="opt_name">${escape(item.text)}</div>
+            <img class="opt_flag_selected" src="${item.src}" alt="${escape(item.text)}">
+          </div>`;
+        }
+      },
+      onInitialize: function() {
+        this.control_input.addEventListener('paste', (e) => {
+          e.stopPropagation();
+        }, true);
+      }
+    });
+  }
+});
+
+$(document).ready(function () {
+  if ($('#homeSellTravel').length > 0) {
+    new TomSelect('#homeSellTravel', {
+      maxOptions: 300,
+      render: {
+        option: function (data, escape) {
+          return `
+          <div>
+            <img class="opt_flag" src="${data.src}" alt="${escape(data.text)}">
+            <div class="opt_name">${escape(data.text)}</div>
+          </div>`;
+        },
+        item: function (item, escape) {
+          return `
+          <div>
+            <div class="opt_name">${escape(item.text)}</div>
+            <img class="opt_flag_selected" src="${item.src}" alt="${escape(item.text)}">
+          </div>`;
+        }
+      },
+      onInitialize: function() {
+        this.control_input.addEventListener('paste', (e) => {
+          e.stopPropagation();
+        }, true);
+      }
+    });
+  }
+});
+
+$(document).ready(function () {
+  if ($('#youSendCurrency').length > 0) {
+    new TomSelect('#youSendCurrency', {
+      maxOptions: 300,
+      render: {
+        option: function (data, escape) {
+          return `
+          <div>
+            <img class="opt_flag" src="${data.src}" alt="${escape(data.text)}">
+            <div class="opt_name">${escape(data.text)}</div>
+          </div>`;
+        },
+        item: function (item, escape) {
+          return `
+          <div>
+            <div class="opt_name">${escape(item.text)}</div>
+            <img class="opt_flag_selected" src="${item.src}" alt="${escape(item.text)}">
+          </div>`;
+        }
+      },
+      onInitialize: function() {
+        this.control_input.addEventListener('paste', (e) => {
+          e.stopPropagation();
+        }, true);
+      }
+    });
+  }
+});
+
+$(document).ready(function () {
+  if ($('#recipientGets').length > 0) {
+    new TomSelect('#recipientGets', {
+      maxOptions: 300,
+      render: {
+        option: function (data, escape) {
+          return `
+          <div>
+            <img class="opt_flag" src="${data.src}" alt="${escape(data.text)}">
+            <div class="opt_name">${escape(data.text)}</div>
+          </div>`;
+        },
+        item: function (item, escape) {
+          return `
+          <div>
+            <div class="opt_name">${escape(item.text)}</div>
+            <img class="opt_flag_selected" src="${item.src}" alt="${escape(item.text)}">
+          </div>`;
+        }
+      },
+      onInitialize: function() {
+        this.control_input.addEventListener('paste', (e) => {
+          e.stopPropagation();
+        }, true);
+      }
+    });
+  }
+});
+
+$(document).ready(function () {
+  new TomSelect('#country-code', {
+    maxItems: 1,
+    valueField: 'dialCode',
+    labelField: 'dialCode',
+    searchField: ['country', 'dialCode'],
+    items: ['+1'],          // Default selected — Canada (matching your screenshot)
+    controlInput: null,     // Disable typing in control
+
+    options: [
+      { dialCode: '+61',  country: 'Australia',      flag: 'flags/aud.png' },
+      { dialCode: '+1',   country: 'Canada',         flag: 'flags/cad.png' },
+      { dialCode: '+86',  country: 'China',          flag: 'flags/cny.png' },
+      { dialCode: '+91',  country: 'India',          flag: 'flags/inr.png' },
+      { dialCode: '+81',  country: 'Japan',          flag: 'flags/jpy.png' },
+      { dialCode: '+60',  country: 'Malaysia',       flag: 'flags/myr.png' },
+      { dialCode: '+52',  country: 'Mexico',         flag: 'flags/mxn.png' },
+      { dialCode: '+64',  country: 'New Zealand',    flag: 'flags/nzd.png' },
+      { dialCode: '+63',  country: 'Philippines',    flag: 'flags/php.png' },
+      { dialCode: '+65',  country: 'Singapore',      flag: 'flags/sgd.png' },
+      { dialCode: '+27',  country: 'South Africa',   flag: 'flags/zar.png' },
+      { dialCode: '+82',  country: 'South Korea',    flag: 'flags/krw.png' },
+      { dialCode: '+46',  country: 'Sweden',         flag: 'flags/sek.png' },
+      { dialCode: '+41',  country: 'Switzerland',    flag: 'flags/chf.png' },
+      { dialCode: '+66',  country: 'Thailand',       flag: 'flags/thb.png' },
+      { dialCode: '+90',  country: 'Turkey',         flag: 'flags/try.png' },
+      { dialCode: '+971', country: 'UAE',            flag: 'flags/aed.png' },
+      { dialCode: '+1',   country: 'United States',  flag: 'flags/usd.png' },
+      { dialCode: '+84',  country: 'Vietnam',        flag: 'flags/vnd.png' },
+    ],
+
+    render: {
+      // Closed state — flag + code
+      item: function(data, escape) {
+        return `
+          <div class="ts-selected-item">
+            <img src="${escape(data.flag)}" alt="${escape(data.country)}">
+            <span>${escape(data.dialCode)}</span>
+          </div>
+        `;
+      },
+      // Dropdown list rows
+      option: function(data, escape) {
+        return `
+          <div class="ts-option-item">
+            <img src="${escape(data.flag)}" alt="${escape(data.country)}">
+            <span class="ts-country-name">${escape(data.country)}</span>
+            <span class="ts-country-code">${escape(data.dialCode)}</span>
+          </div>
+        `;
+      }
+    }
+  });
+});
+
+$(document).ready(function () {
+  new TomSelect('#international-country-code', {
+    maxItems: 1,
+    valueField: 'dialCode',
+    labelField: 'dialCode',
+    searchField: ['country', 'dialCode'],
+    items: ['+1'],          // Default selected — Canada (matching your screenshot)
+    controlInput: null,     // Disable typing in control
+
+    options: [
+      { dialCode: '+61',  country: 'Australia',      flag: 'flags/aud.png' },
+      { dialCode: '+1',   country: 'Canada',         flag: 'flags/cad.png' },
+      { dialCode: '+86',  country: 'China',          flag: 'flags/cny.png' },
+      { dialCode: '+91',  country: 'India',          flag: 'flags/inr.png' },
+      { dialCode: '+81',  country: 'Japan',          flag: 'flags/jpy.png' },
+      { dialCode: '+60',  country: 'Malaysia',       flag: 'flags/myr.png' },
+      { dialCode: '+52',  country: 'Mexico',         flag: 'flags/mxn.png' },
+      { dialCode: '+64',  country: 'New Zealand',    flag: 'flags/nzd.png' },
+      { dialCode: '+63',  country: 'Philippines',    flag: 'flags/php.png' },
+      { dialCode: '+65',  country: 'Singapore',      flag: 'flags/sgd.png' },
+      { dialCode: '+27',  country: 'South Africa',   flag: 'flags/zar.png' },
+      { dialCode: '+82',  country: 'South Korea',    flag: 'flags/krw.png' },
+      { dialCode: '+46',  country: 'Sweden',         flag: 'flags/sek.png' },
+      { dialCode: '+41',  country: 'Switzerland',    flag: 'flags/chf.png' },
+      { dialCode: '+66',  country: 'Thailand',       flag: 'flags/thb.png' },
+      { dialCode: '+90',  country: 'Turkey',         flag: 'flags/try.png' },
+      { dialCode: '+971', country: 'UAE',            flag: 'flags/aed.png' },
+      { dialCode: '+1',   country: 'United States',  flag: 'flags/usd.png' },
+      { dialCode: '+84',  country: 'Vietnam',        flag: 'flags/vnd.png' },
+    ],
+
+    render: {
+      // Closed state — flag + code
+      item: function(data, escape) {
+        return `
+          <div class="ts-selected-item">
+            <img src="${escape(data.flag)}" alt="${escape(data.country)}">
+            <span>${escape(data.dialCode)}</span>
+          </div>
+        `;
+      },
+      // Dropdown list rows
+      option: function(data, escape) {
+        return `
+          <div class="ts-option-item">
+            <img src="${escape(data.flag)}" alt="${escape(data.country)}">
+            <span class="ts-country-name">${escape(data.country)}</span>
+            <span class="ts-country-code">${escape(data.dialCode)}</span>
+          </div>
+        `;
+      }
+    }
+  });
+});
+
+$(document).ready(function () {
+  new TomSelect('#sell-country-code', {
+    maxItems: 1,
+    valueField: 'dialCode',
+    labelField: 'dialCode',
+    searchField: ['country', 'dialCode'],
+    items: ['+1'],          // Default selected — Canada (matching your screenshot)
+    controlInput: null,     // Disable typing in control
+
+    options: [
+      { dialCode: '+61',  country: 'Australia',      flag: 'flags/aud.png' },
+      { dialCode: '+1',   country: 'Canada',         flag: 'flags/cad.png' },
+      { dialCode: '+86',  country: 'China',          flag: 'flags/cny.png' },
+      { dialCode: '+91',  country: 'India',          flag: 'flags/inr.png' },
+      { dialCode: '+81',  country: 'Japan',          flag: 'flags/jpy.png' },
+      { dialCode: '+60',  country: 'Malaysia',       flag: 'flags/myr.png' },
+      { dialCode: '+52',  country: 'Mexico',         flag: 'flags/mxn.png' },
+      { dialCode: '+64',  country: 'New Zealand',    flag: 'flags/nzd.png' },
+      { dialCode: '+63',  country: 'Philippines',    flag: 'flags/php.png' },
+      { dialCode: '+65',  country: 'Singapore',      flag: 'flags/sgd.png' },
+      { dialCode: '+27',  country: 'South Africa',   flag: 'flags/zar.png' },
+      { dialCode: '+82',  country: 'South Korea',    flag: 'flags/krw.png' },
+      { dialCode: '+46',  country: 'Sweden',         flag: 'flags/sek.png' },
+      { dialCode: '+41',  country: 'Switzerland',    flag: 'flags/chf.png' },
+      { dialCode: '+66',  country: 'Thailand',       flag: 'flags/thb.png' },
+      { dialCode: '+90',  country: 'Turkey',         flag: 'flags/try.png' },
+      { dialCode: '+971', country: 'UAE',            flag: 'flags/aed.png' },
+      { dialCode: '+1',   country: 'United States',  flag: 'flags/usd.png' },
+      { dialCode: '+84',  country: 'Vietnam',        flag: 'flags/vnd.png' },
+    ],
+
+    render: {
+      // Closed state — flag + code
+      item: function(data, escape) {
+        return `
+          <div class="ts-selected-item">
+            <img src="${escape(data.flag)}" alt="${escape(data.country)}">
+            <span>${escape(data.dialCode)}</span>
+          </div>
+        `;
+      },
+      // Dropdown list rows
+      option: function(data, escape) {
+        return `
+          <div class="ts-option-item">
+            <img src="${escape(data.flag)}" alt="${escape(data.country)}">
+            <span class="ts-country-name">${escape(data.country)}</span>
+            <span class="ts-country-code">${escape(data.dialCode)}</span>
+          </div>
+        `;
+      }
+    }
+  });
+});
+
+// New JS 08/04/2026 ended
