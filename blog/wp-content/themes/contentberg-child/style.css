@@ -1,0 +1,146 @@
+/*
+Theme Name: ContentBerg Child
+Theme URI: https://contentberg.theme-sphere.com
+Template: contentberg
+Author: ThemeSphere
+Author URI: http://theme-sphere.com
+Description: A readable blog theme with content focus. Designed by ThemeSphere.
+Version: 2.0.0.1627135257
+Updated: 2021-07-24 14:00:57
+
+*/
+/* comman css */
+.wrap{width: 1120px !important;}
+.col_full{width: 25% !important;}
+.sticky-bar{position: inherit !important;top: inherit;width: inherit;z-index: inherit !important;}
+.main-head.simple .inner.sticky-bar{line-height: inherit;min-height: inherit;border-bottom: inherit;box-shadow: inherit;animation: inherit;animation-fill-mode: inherit;}
+.dflex_box{display: flex;padding: 174px 0 63px;}
+
+
+/* header */
+#main-head{min-height: inherit !important;}
+.main-head.simple-boxed{border-top: 0;}
+.main-head.simple{box-shadow: inherit;border: 0;}
+.main-head.simple .top_inner_head{display: block;width: 100%;background-color: #2F057B;line-height: 59px;min-height: 59px;}
+.main-head.simple .top_inner_head .navbar-nav{display: flex;align-items: center;justify-content: flex-end;}
+.main-head.simple .top_inner_head .navbar-nav .nav-item.mr-3{margin-right: 1rem;}
+.main-head.simple .top_inner_head .navbar-nav .nav-item .nav-link{padding: 0 8px;}
+.main-head.simple .top_inner_head .navbar-nav .nav-item .nav-link span{display: inline-block;text-transform: capitalize;font-size: 16px;text-align: center;color: #FFFFFF;font-weight: 400;}
+.main-head.simple .top_inner_head .navbar-nav .nav-item .nav-link span:hover{color: #1DCEB0;}
+
+.main-head.simple-boxed .navigation .menu > li:nth-child(4),
+.main-head.simple-boxed .navigation .menu > li:nth-child(5),
+.main-head.simple-boxed .navigation .menu > li:nth-child(6),
+.main-head.simple-boxed .navigation .menu > li:nth-child(7),
+.main-head.simple-boxed .navigation .menu > li:nth-child(8){display: none;}
+
+.main-head.simple .title .logo-image{width: 255px;}
+.main-head.simple-boxed .actions{display: none;}
+.main-head.simple-boxed .navigation-wrap{margin-left: auto;}
+.main-head.simple .main_inner_head{background: #F0F5FC;line-height: 101px;min-height: 101px;}
+.main-head.simple .main_inner_head .navigation-wrap .navigation{margin-top: infinite;margin-bottom: inherit;}
+.main-head.simple .main_inner_head .menu-item{margin-right: 1rem !important;}
+.main-head.simple .main_inner_head .menu-item a{text-transform: capitalize;font-size: 20px;}
+.main-head.simple .main_inner_head .menu-item a span{display: inline-block;text-align: right;color: #2F057B;font-weight: 700;line-height: 24px;}
+
+/* header banner */
+.haead_banner {display: block;background-repeat: no-repeat;background-size: cover;background-position: top center;width: 100%;height: 160px;position: relative;margin-bottom: 16px;}
+.haead_banner .Banner_box{display: block;width: 100%; padding: 55px 0;}
+.haead_banner .Banner_box .banner_title{display: block;width: 100%;text-align: left;}
+.haead_banner .Banner_box .banner_title h1{display: block;font-size: 40px;font-weight: 700;line-height: 49px;color: #FFFFFF;}
+
+/* Footer */
+.main-footer{background-color: #FFFFFF;}
+.main-footer.bold-light .lower-footer > .wrap{padding: 0 !important;}
+#main_footer{display: block;width: 100%;}
+#main_footer .foot_bg{display: block;background-repeat: no-repeat;background-size: cover;background-position: top center;width: 100%;height: 416px;}
+#main_footer .foot_bg .foot_box{display: block;width: 100%;}
+#main_footer .foot_bg .foot_box h5{display: block;font-size: 16px;font-weight: 700;line-height: 19px;text-transform: uppercase;color: #FFFFFF;text-align: left;padding-bottom: 19px;}
+#main_footer .foot_bg .foot_box ul.footlinks{display: block;width: 100%;}
+#main_footer .foot_bg .foot_box ul.footlinks li{display: block;width: 100%;margin-bottom: 7px;}
+#main_footer .foot_bg .foot_box ul.footlinks li a{display: inline-block;font-size: 12px;font-weight: normal;line-height: 1;color: #FFFFFF;}
+#main_footer .foot_bg .foot_box ul li a:hover{text-decoration: underline;}
+#main_footer .foot_bg .foot_box .contact_info{display: flex;align-items: center;justify-content: flex-start;padding-bottom: 23px;}
+#main_footer .foot_bg .foot_box .contact_info span{display: block;font-size: 12px;font-weight: normal;line-height: 1;color: #FFFFFF;margin-right: 5px;}
+#main_footer .foot_bg .foot_box .contact_info a{display: inline-block;font-size: 12px;font-weight: normal;line-height: 1;color: #FFFFFF;}
+#main_footer .foot_bg .foot_box .contact_info a:hover{text-decoration: underline;}
+#main_footer .foot_bg .foot_box .social{display: flex;align-items: center;justify-content: flex-start;margin-top: 8px;}
+#main_footer .foot_bg .foot_box .social li{margin-right: 20px;margin-bottom: 0;}
+#main_footer .foot_bg .foot_box .social li img{max-width: 100%;height: auto;}
+#main_footer .foot_copyright{display: block;width: 100%;background-color: #2F057B;}
+#main_footer .foot_copyright .copyright{display: block;width: 100%;text-align: center;max-width: 1000px;margin: 0 auto;padding: 10px 0 11px;text-transform: inherit;}
+#main_footer .foot_copyright .copyright p{display: block;font-size: 12px;font-weight: normal;line-height: 35px;color: #FFFFFF;margin-bottom: 0;letter-spacing: 0px;}
+
+/* post listing */
+.large-post .post-title-alt{font-size: 30px;line-height: 40px;max-width: inherit;}
+.post-title-alt a, .post-title a{color: #2F057B !important;}
+.post-title-alt a:hover, .post-title a:hover{opacity: 1;
+text-shadow: 2px 2px white, 2px -2px white, -2px 2px white, -2px -2px white;
+box-shadow: 0 -1px 0 0 white inset, 0 -2px 0 0 #2F057B inset;}
+.post-meta .post-cat > a, .post-meta time, .post-meta .comments, .post-meta .meta-item{font-weight: 600;}
+.post-content .read-more a span{font-weight: 600;}
+.post-content .read-more a::after {background: #2F057B !important;}
+.main-pagination.number .current{color: #2F057B !important;}
+.sidebar .widget-title{color: #2F057B !important;}
+.widget-posts .posts.large .post-title{font-weight: 600;}
+
+
+/* single_post */
+.single-post .featured .post-meta .post-cat{display: none;}
+.right-sidebar #bunyad-widget-subscribe-1, .right-sidebar #bunyad-widget-ads-1{display: none;}
+.post-content p > a, .post-content li > a, .post-content dd > a, .post-content td a, .post-content th a, .post-content h1 a, .post-content h2 a, .post-content h3 a, .post-content h4 a, .post-content h5 a, .post-content h6 a, .post-content em a, .post-content strong a{box-shadow: 0 -1px 0 0 #2F057B inset;}
+.post-content blockquote > p, .post-content .wp-block-quote.is-style-large > p, .textwidget blockquote > p, .textwidget .wp-block-quote.is-style-large > p{color: #2F057B !important;font-weight: 800;text-align: left;font-size: 30px;}
+.entry-content h2,.entry-content h3,.entry-content h4,.entry-content h5,.entry-content h6{color: #2F057B !important;}
+.related-posts.grid-2 .post-title a{color: #000000 !important;font-weight: 600;}
+.section-head .title{color: #2F057B !important;}
+.entry-content p{font-size: 18px;line-height: 34px;}
+
+
+@media screen and (max-width: 2560px) and (min-width: 1800px){
+.haead_banner {height: 187px;}
+
+}
+@media only screen and (max-width: 1199px) {
+.wrap{width: 960px !important;}
+}
+    
+@media only screen and (max-width: 991px)  {
+	.wrap{max-width: 720px !important;width: 100% !important;padding: 0 15px !important;}
+	.main-head.simple .top_inner_head{display: none;}
+	.main-head.simple .main_inner_head{background: #FFFFFF;line-height: 52px;min-height: 52px;}
+	.main-head.simple .title .logo-image, .main-head.simple .title .mobile-logo{width: 146px;}
+	.main-head.simple .mobile-nav{position: absolute;right: 0px;top: 8px;}
+	.large-post .post-title-alt{font-size: 26px;line-height: 30px;}
+	.off-canvas{background: #FFF linear-gradient(180deg, #F0F5FC 0%, #DADAFD 100%) 0% 0% no-repeat padding-box;}
+	.mobile-menu li a{border-bottom: 1px solid #9FC6F9;color: #2F057B;font-size: 16px;}
+	.entry-content p, .post-content li, .textwidget li{font-size: 16px;line-height: 26px;}
+	.post-content blockquote > p, .post-content .wp-block-quote.is-style-large > p, .textwidget blockquote > p, .textwidget .wp-block-quote.is-style-large > p{font-size: 26px;line-height: 34px;}
+}
+    
+@media only screen and (max-width: 767px)  {
+	.main-head.simple .title .logo-image{display:none;}
+	.wrap{max-width: 540px !important; width: 100% !important;padding: 0 15px !important;}
+	.navigation-wrap{display: block !important;}
+	.haead_banner{background-color: #4a0180;height: 60px;}
+	.haead_banner .Banner_box{padding: 15px 0;}
+	.haead_banner .Banner_box .banner_title h1{font-size: 26px;line-height: 32px;}
+	.single-post .haead_banner{margin-bottom: 0;}
+	#main_footer .foot_bg{background-image: url(../../../../../dev.travelfx.co.uk/blog/wp-content/uploads/2021/07/bg-footer-arch-small.png) !important;height: 735px;}
+	.dflex_box{flex-direction: column;padding: 49px 0 63px;}
+	.col_full{width: 100% !important;margin-bottom: 15px;}
+	#main_footer .foot_copyright .copyright p{line-height: 18px;max-width: 460px;}
+	.posts-large .post-content p{font-size: 14px;line-height: 24px;}
+	.single-creative .featured .post-title{font-size: 26px;line-height: 30px;}
+	.entry-content p, .post-content li, .textwidget li{font-size: 14px;line-height: 24px;}
+	.post-content blockquote > p, .post-content .wp-block-quote.is-style-large > p, .textwidget blockquote > p, .textwidget .wp-block-quote.is-style-large > p{font-size: 20px;line-height: 26px;}
+}
+    
+@media only screen and (max-width: 479px)  {
+	.wrap{max-width: 100% !important; width: 100% !important;padding: 0 35px !important;}
+	.large-post .post-title-alt{font-size: 20px;line-height: 24px;}
+	#main_footer .foot_copyright .copyright p{max-width: 270px;}
+	.main-pagination.number .inner{padding: 5px;width: 100%;}
+	.main-pagination.number .page-numbers, .main-pagination.number a{font-size: 10px;}
+	.entry-content p, .post-content li, .textwidget li{font-size: 12px;line-height: 24px;}
+	.comments-list .comment p{font-size: 12px;line-height: 24px;}
+}
