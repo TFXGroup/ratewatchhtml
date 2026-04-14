@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Client Rate Watch</title>
+    <meta name="description" content="" >
+    <meta name="author" content="Travel FX" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Head links -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#603cba">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Fonts -->
+    <link rel="preload" href="/fonts/montserrat-regular-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/montserrat-bold-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" as="style" href="css_ext/css2.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="css_ext/css2.css">
+    </noscript>
+    <link rel="preload" as="style" href="css_ext/bootstrap400.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="css_ext/bootstrap400.min.css">
+    </noscript>
+    <!-- Main style -->
+     <script src="js_ext/jquery351.min.js"></script>
+    <!-- Tom select -->
+    <link rel="preload" as="style" href="css_ext/tom-select172.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="css_ext/tom-select172.min.css">
+    </noscript>
+    <!-- Tom select -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobilestyle.css">
+</head>
+<body>
+    <script src="js_ext/jquery351.min.js"></script>
+    <script src="/script.js"></script>
+    <!-- Header -->
+    <header id="header">
+        <div class="top_header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 m-auto">
+                        <div class="topbar-leftword">
+                            <p>
+                                <a href="client-area-dashboard">Logged in as Mr Jason Reed</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="top_nav">
+                            <nav class="navbar navbar-expand-lg" id="TFX-top-navbar">
+                                <div class="collapse navbar-collapse" id="TFX-nav">
+                                    <ul class="navbar-nav nav ml-auto">
+                                        <li class="nav-item mr-3">
+                                            <a href="client-area-dashboard" class="nav-link">
+                                                <span>Client Home</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item mr-3">
+                                            <a href="login" class="nav-link">
+                                                <span>Logout</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item mr-3">
+                                            <a href="about-travel-fx" class="nav-link">
+                                                <span>About us</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item mr-3">
+                                            <a href="help" class="nav-link">
+                                                <span>Help</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item mr-0">
+                                            <a href="contact-travel-fx" class="nav-link">
+                                                <span>Contact</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bot_header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="bot_nav">
+                            <div class="head_left">
+                                <div class="logo">
+                                    <a href="/" title="Travel FX Homepage">
+                                        <img src="images/travel_fx_logo.png" width="250" height="62"
+                                            alt="Travel FX Homepage">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="head_right">
+                                <nav class="navbar navbar-expand-lg" id="TFX-bot-navbar">
+                                    <div class="collapse navbar-collapse" id="navbar-list-3">
+                                        <ul class="navbar-nav">
+
+                                            <li class="nav-item mr-3 dropdown">
+                                                <a class="nav-link dropdown-toggle" href="#" id="BuyCurrency"
+                                                    role="button" data-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false">
+                                                    <span>Buy Currency</span>
+                                                </a>
+                                                <div class="dropdown-menu" role="menu" aria-labelledby="BuyCurrency">
+                                                    <a class="dropdown-item" role="menuitem" href="travel-money">
+                                                        <span>Travel Money</span>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="buy-euros">
+                                                        <span>Buy Euros</span>
+                                                    </a>
+                                                    <a class="dropdown-item" role="menuitem" href="buy-us-dollars">
+                                                        <span>Buy US Dollars</span>
+                                                    </a>
+                                                    <a class="dropdown-item" role="menuitem" href="buy-turkish-lira">
+                                                        <span>Buy Turkish Lira</span>
+                                                    </a>
+                                                    <a class="dropdown-item" role="menuitem" href="buy-australian-dollars">
+                                                        <span>Buy Australian Dollars</span>
+                                                    </a>
+                                                    <a class="dropdown-item" role="menuitem" href="buy-uae-dirham">
+                                                        <span>Buy UAE Dirham</span>
+                                                    </a>
+                                                    <a class="dropdown-item" role="menuitem" href="buy-thai-baht">
+                                                        <span>Buy Thai Baht</span>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="latest-travel-money-rates">
+                                                        <span>View all currencies</span>
+                                                    </a>
+                                                    <a class="dropdown-item" role="menuitem" href="buyback-guarantee">
+                                                        <span>Buyback Guarantee</span>
+                                                    </a>
+                                                </div>
+                                            </li>
+
+                                            <li class="nav-item mr-3 dropdown">
+                                                <a class="nav-link dropdown-toggle" href="#" id="SellCurrency"
+                                                    role="button" data-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false">
+                                                    <span>Sell Currency</span>
+                                                </a>
+                                                <div class="dropdown-menu" role="menu" aria-labelledby="SellCurrency">
+                                                    <a class="dropdown-item" role="menuitem" href="currency-buy-back">
+                                                        <span>Sell Currency</span>
+                                                    </a>
+                                                    <a class="dropdown-item" role="menuitem" href="sell-euros">
+                                                        <span>Sell Euros</span>
+                                                    </a>
+                                                    <a class="dropdown-item" role="menuitem" href="sell-us-dollars">
+                                                        <span>Sell US Dollars</span>
+                                                    </a>
+                                                    <a class="dropdown-item" role="menuitem" href="sell-turkish-lira">
+                                                        <span>Sell Turkish Lira</span>
+                                                    </a>
+                                                    <a class="dropdown-item" role="menuitem" href="sell-australian-dollars">
+                                                        <span>Sell Australian Dollars</span>
+                                                    </a>
+                                                    <a class="dropdown-item" role="menuitem" href="latest-buy-back-rates">
+                                                        <span>View all currencies</span>
+                                                    </a>
+
+                                                </div>
+                                            </li>
+                                            <li class="nav-item mr-0 dropdown">
+                                                <a class="nav-link dropdown-toggle" href="#" id="InternationalTransfer"
+                                                    role="button" data-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false">
+                                                    <span>International Transfer</span>
+                                                </a>
+                                                <div class="dropdown-menu" role="menu" aria-labelledby="InternationalTransfer">
+                                                    <a class="dropdown-item" role="menuitem" href="international-transfers">
+                                                        <span>International Transfer</span>
+                                                    </a>
+                                                    <a class="dropdown-item" role="menuitem" href="transfer-pounds-to-euros">
+                                                        <span>Pounds To Euros</span>
+                                                    </a>
+                                                    <a class="dropdown-item" role="menuitem" href="transfer-pounds-to-us-dollars">
+                                                        <span>Pounds To US Dollars</span>
+                                                    </a>
+                                                    <a class="dropdown-item" role="menuitem" href="transfer-pounds-to-turkish-lira">
+                                                        <span>Pounds To Turkish Lira</span>
+                                                    </a>
+                                                    <a class="dropdown-item" role="menuitem"
+                                                        href="transfer-pounds-to-australian-dollars">
+                                                        <span>Pounds To Aus Dollars</span>
+                                                    </a>
+                                                    <a class="dropdown-item" role="menuitem" href="transfer-pounds-to-uae-dirham">
+                                                        <span>Pounds To UAE Dirham</span>
+                                                    </a>
+                                                    <a class="dropdown-item" role="menuitem" href="latest-transfer-rates">
+                                                        <span>View all currencies</span>
+                                                    </a>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mob_header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="mob_nav">
+                            <nav class="navbar navbar-expand-lg">
+                                <div class="logo">
+                                    <a href="/" title="Travel FX Homepage">
+                                        <img src="images/travel_fx_logo.png" width="146" height="35"
+                                            alt="Travel FX Homepage">
+                                    </a>
+                                </div>
+                                <button type="button" class="navbar-toggler" data-toggle="collapse"
+                                    data-target="#navbarCollapse">
+                                    <img src="images/menu_bar.png" width="31" height="25" alt="menu bar">
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarCollapse">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item">
+                                            <a href="client-area-dashboard" class="nav-link">
+                                                <span>Client Home</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="BuyCurrency-mob"
+                                                role="button" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false">
+                                                <span>Buy Currency</span>
+                                            </a>
+                                            <div class="dropdown-menu" role="menu" aria-labelledby="BuyCurrency-mob">
+                                                <a class="dropdown-item" role="menuitem" href="travel-money">
+                                                    <span>Travel Money</span>
+                                                </a>
+
+                                                <a class="dropdown-item" role="menuitem" href="buy-euros">
+                                                    <span>Buy Euros</span>
+                                                </a>
+                                                <a class="dropdown-item" role="menuitem" href="buy-us-dollars">
+                                                    <span>Buy US Dollars</span>
+                                                </a>
+                                                <a class="dropdown-item" role="menuitem" href="buy-turkish-lira">
+                                                    <span>Buy Turkish Lira</span>
+                                                </a>
+                                                <a class="dropdown-item" role="menuitem" href="buy-australian-dollars">
+                                                    <span>Buy Australian Dollars</span>
+                                                </a>
+                                                <a class="dropdown-item" role="menuitem" href="buy-uae-dirham">
+                                                    <span>Buy UAE Dirham</span>
+                                                </a>
+                                                <a class="dropdown-item" role="menuitem" href="buy-thai-baht">
+                                                    <span>Buy Thai Baht</span>
+                                                </a>
+
+                                                <a class="dropdown-item" role="menuitem" href="latest-travel-money-rates">
+                                                    <span>View all currencies</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="SellCurrency-mob"
+                                                role="button" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false">
+                                                <span>Sell Currency</span>
+                                            </a>
+                                            <div class="dropdown-menu" role="menu" aria-labelledby="SellCurrency-mob">
+
+                                                <a class="dropdown-item" role="menuitem" href="currency-buy-back">
+                                                    <span>Sell Currency</span>
+                                                </a>
+                                                <a class="dropdown-item" role="menuitem" href="sell-euros">
+                                                    <span>Sell Euros</span>
+                                                </a>
+                                                <a class="dropdown-item" role="menuitem" href="sell-us-dollars">
+                                                    <span>Sell US Dollars</span>
+                                                </a>
+                                                <a class="dropdown-item" role="menuitem" href="sell-turkish-lira">
+                                                    <span>Sell Turkish Lira</span>
+                                                </a>
+                                                <a class="dropdown-item" role="menuitem" href="sell-australian-dollars">
+                                                    <span>Sell Australian Dollars</span>
+                                                </a>
+                                                <a class="dropdown-item" role="menuitem" href="latest-buy-back-rates">
+                                                    <span>View all currencies</span>
+                                                </a>
+
+                                            </div>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="InternationalTransfer-mob"
+                                                role="button" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false">
+                                                <span>International Transfer</span>
+                                            </a>
+                                            <div class="dropdown-menu" role="menu" aria-labelledby="InternationalTransfer-mob">
+                                                <a class="dropdown-item" role="menuitem" href="international-transfers">
+                                                    <span>International Transfer</span>
+                                                </a>
+                                                <a class="dropdown-item" role="menuitem" href="transfer-pounds-to-euros">
+                                                    <span>Pounds To Euros</span>
+                                                </a>
+                                                <a class="dropdown-item" role="menuitem" href="transfer-pounds-to-us-dollars">
+                                                    <span>Pounds To US Dollars</span>
+                                                </a>
+                                                <a class="dropdown-item" role="menuitem" href="transfer-pounds-to-turkish-lira">
+                                                    <span>Pounds To Turkish Lira</span>
+                                                </a>
+                                                <a class="dropdown-item" role="menuitem" href="transfer-pounds-to-australian-dollars">
+                                                    <span>Pounds To Aus Dollars</span>
+                                                </a>
+                                                <a class="dropdown-item" role="menuitem" href="transfer-pounds-to-uae-dirham">
+                                                    <span>Pounds To UAE Dirham</span>
+                                                </a>
+                                                <a class="dropdown-item" role="menuitem" href="latest-transfer-rates">
+                                                    <span>View all currencies</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="login" class="nav-link">
+                                                <span>Logout</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="about-travel-fx" class="nav-link">
+                                                <span>About us</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="help" class="nav-link">
+                                                <span>Help</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="contact-travel-fx" class="nav-link">
+                                                <span>Contact</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Client area - Your Profile Banner -->
+    <section class="rw_clientarea_bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="banner_title">
+                        <h1 class="d-lg-block d-md-block d-none">Rate watch</h1>
+                        <h1 class="d-lg-none d-md-none d-block">Set an alert</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Client area - Your Profile -->
+    <section class="rw_dashboard dashboard-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-3 left-sidebar">
+                    <div class="side-menu mobile-sidemenu"
+                        style="background-image: url(images/dashboard/dashboard-left-topbox.png);">
+                        <nav>
+                            <ul>
+                                <li>
+                                    <span>
+                                        <img src="./images/dashboard/dashboard.svg" alt="">
+                                    </span>
+                                    <a href="client-area-dashboard">Dashboard</a>
+                                </li>
+                                <li>
+                                    <span>
+                                        <img src="images/dashboard/your-profile.svg" alt="">
+                                    </span>
+                                    <a href="client-area-your-profile">Your profile</a>
+                                </li>
+                                <li>
+                                    <span>
+                                        <img src="images/dashboard/order-history.svg" alt="">
+                                    </span>
+                                    <a href="client-area-order-history-overview">Order history</a>
+                                </li>
+                                <li>
+                                    <span>
+                                        <img src="images/dashboard/recipients.svg" alt="">
+                                    </span>
+                                    <a href="#">Recipients</a>
+                                </li>
+                                <li class="active-link">
+                                    <span>
+                                        <img src="images/dashboard/reminders.svg" alt="">
+                                    </span>
+                                    <a href="">Rate Watch</a>
+                                </li>
+                                <li class="desktop-none">
+                                    <span>
+                                        <img src="images/dashboard/sign-out.svg" alt="">
+                                    </span>
+                                    <a href="login">Log out</a>
+                                </li>
+                                <li class="desktop-none">
+                                    <a href="travel-fx-privacy-policy">Privacy policy</a>
+                                </li>
+                                <li class="desktop-none">
+                                    <a href="travel-fx-terms-and-conditions">Terms & conditions</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="side-menu mobile-bottom"
+                        style="background-image: url(images/dashboard/dashboard-left-bottombox.png);">
+                        <nav>
+                            <ul>
+                                <li><span><img src="images/dashboard/buy-currency-menu.png" alt=""></span><a
+                                        href="client-area-buy">Buy currency</a>
+                                </li>
+                                <li><span><img src="images/dashboard/sell-currency-menu.png" alt=""></span><a
+                                        href="client-area-sell">Sell currency</a>
+                                </li>
+                                <li><span><img src="images/dashboard/transfer-menu.png" alt=""></span><a
+                                        href="client-area-transfer">Transfer</a></li>
+                                <li class="desktop-none mobilemenu-click"><span><img src="images/dashboard/dots-svg.svg"
+                                            alt=""></span><a href="javascript:void(0);" class="">More</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-9 right-sideinfor">
+                    <div class="left-spacing">
+                        <div class="head_title d-lg-none d-md-none d-block">
+                            <h2>set your rate alerts</h2>
+                        </div>
+                        <div class="heading-withedit d-lg-block d-md-block d-none">
+                            <div class="row justify-content-between">
+                                <div class="col-md-6 col-auto text-left">
+                                    <h2>Rate Alerts</h2>
+                                </div>
+                                <div class="col-md-6 col-auto text-right">
+                                    <a href="#" class="secondary_btn">Set another alert <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 12l14 0" /><path d="M15 16l4 -4" /><path d="M15 8l4 4" /></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rw_form">
+                            <h4>select a product type & Currency</h4>
+                            <div class="sub_form_tab">
+                                <ul class="nav nav-pills">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#buyTravel" data-toggle="tab">
+                                            <img src="./images/buy-travel.png" class="img_default" alt="Buy travel" width="30" height="30" >
+                                            <img src="./images/buy-travel-white.png" class="img_active" alt="Buy travel" width="30" height="30" >
+                                            <h5>Buy travel money rate</h5>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#sellTravel" data-toggle="tab">
+                                            <img src="./images/sell-travel.png" class="img_default" alt="Sell travel" width="30" height="30" >
+                                            <img src="./images/sell-travel-white.png" class="img_active" alt="Sell travel" width="30" height="30" >
+                                            <h5>Sell Travel money rate</h5>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#internationalTransfer" data-toggle="tab">
+                                            <img src="./images/internation-travel.png" class="img_default" alt="International transfer" width="30" height="30" >
+                                            <img src="./images/internation-travel-white.png" class="img_active" alt="International transfer" width="30" height="30" >
+                                            <h5>International Transfer rate</h5>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content clearfix">
+                                    <div class="tab-pane" id="buyTravel">
+                                        <form id="buy" name="buy" action="https://www.travelfx.co.uk/home-buy-order" method="post">
+                                            <div class="form-group">
+                                                <div class="currency_select">
+                                                    <select id="BuyTravelMoney_1" name="BuyTravelMoney_1">
+                                                        <option selected="selected" value="11" data-symbol="EUR"
+                                                            data-src="flags/eur.png">Euros (EUR)</option>
+                                                        <option value="12" data-symbol="USD"
+                                                            data-src="flags/usd.png">US Dollars (USD)</option>
+                                                        <option value="13" data-symbol="AUD"
+                                                            data-src="flags/aud.png">Australian Dollars (AUD)</option>
+                                                        <option value="30" data-symbol="BBD"
+                                                            data-src="flags/bbd.png">Barbados Dollar (BBD)</option>
+                                                        <option value="64" data-symbol="BAM"
+                                                            data-src="flags/bam.png">Bosnia Maraka (BAM)</option>
+                                                        <option value="31" data-symbol="BRL"
+                                                            data-src="flags/brl.png">Brazilian Real (BRL)</option>
+                                                        <option value="65" data-symbol="BND"
+                                                            data-src="flags/bnd.png">Brunei Dollar (BND)</option>
+                                                        <option value="14" data-symbol="CAD"
+                                                            data-src="flags/cad.png">Canadian Dollars (CAD)</option>
+                                                        <option value="33" data-symbol="CLP"
+                                                            data-src="flags/clp.png">Chilean Peso (CLP)</option>
+                                                        <option value="34" data-symbol="CNY"
+                                                            data-src="flags/cny.png">Chinese Yuan (CNY)</option>
+                                                        <option value="68" data-symbol="COP"
+                                                            data-src="flags/cop.png">Colombia Peso (COP)</option>
+                                                        <option value="69" data-symbol="CRC"
+                                                            data-src="flags/crc.png">Costa Rica Colon (CRC)</option>
+                                                        <option value="36" data-symbol="CZK"
+                                                            data-src="flags/czk.png">Czech Koruna (CZK)</option>
+                                                        <option value="38" data-symbol="DOP"
+                                                            data-src="flags/dop.png">Dominican Republic Peso (DOP)</option>
+                                                        <option value="39" data-symbol="XCD"
+                                                            data-src="flags/xcd.png">East Caribbean Dollar (XCD)</option>
+                                                        <option value="42" data-symbol="FJD"
+                                                            data-src="flags/fjd.png">Fiji Dollar (FJD)</option>
+                                                        <option value="25" data-symbol="HKD"
+                                                            data-src="flags/hkd.png">Hong Kong Dollars (HKD)</option>
+                                                        <option value="24" data-symbol="HUF"
+                                                            data-src="flags/huf.png">Hungarian Forint (HUF)</option>
+                                                        <option value="43" data-symbol="ISK"
+                                                            data-src="flags/isk.png">Icelandic Krona (ISK)</option>
+                                                        <option value="73" data-symbol="INR"
+                                                            data-src="flags/inr.png">India Rupee (INR)</option>
+                                                        <option value="44" data-symbol="IDR"
+                                                            data-src="flags/idr.png">Indonesian Rupiah (IDR)</option>
+                                                        <option value="45" data-symbol="ILS"
+                                                            data-src="flags/ils.png">Israeli Shekel (ILS)</option>
+                                                        <option value="46" data-symbol="JMD"
+                                                            data-src="flags/jmd.png">Jamaican Dollar (JMD)</option>
+                                                        <option value="22" data-symbol="JPY"
+                                                            data-src="flags/jpy.png">Japanese Yen (JPY)</option>
+                                                        <option value="47" data-symbol="JOD"
+                                                            data-src="flags/jod.png">Jordan Dinar (JOD)</option>
+                                                        <option value="48" data-symbol="KES"
+                                                            data-src="flags/kes.png">Kenyan Shilling (KES)</option>
+                                                        <option value="26" data-symbol="MYR"
+                                                            data-src="flags/myr.png">Malaysian Ringgit (MYR)</option>
+                                                        <option value="51" data-symbol="MUR"
+                                                            data-src="flags/mur.png">Mauritian Rupee (MUR)</option>
+                                                        <option value="52" data-symbol="MXN"
+                                                            data-src="flags/mxn.png">Mexican Peso (MXN)</option>
+                                                        <option value="17" data-symbol="NZD"
+                                                            data-src="flags/nzd.png">New Zealand Dollar (NZD)</option>
+                                                        <option value="53" data-symbol="NOK"
+                                                            data-src="flags/nok.png">Norwegian Krone (NOK)</option>
+                                                        <option value="81" data-symbol="PEN"
+                                                            data-src="flags/pen.png">Peru Nuevos Sol (PEN)</option>
+                                                        <option value="55" data-symbol="PHP"
+                                                            data-src="flags/php.png">Phillipino Peso (PHP)</option>
+                                                        <option value="23" data-symbol="PLN"
+                                                            data-src="flags/pln.png">Polish Zloty (PLN)</option>
+                                                        <option value="57" data-symbol="RON"
+                                                            data-src="flags/ron.png">Romanian Leu (RON)</option>
+                                                        <option value="20" data-symbol="SGD"
+                                                            data-src="flags/sgd.png">Singapore Dollars (SGD)</option>
+                                                        <option value="15" data-symbol="ZAR"
+                                                            data-src="flags/zar.png">South African Rand (ZAR)</option>
+                                                        <option value="74" data-symbol="KRW"
+                                                            data-src="flags/krw.png">South Korea Won (KRW)</option>
+                                                        <option value="59" data-symbol="SEK"
+                                                            data-src="flags/sek.png">Swedish Krona (SEK)</option>
+                                                        <option value="18" data-symbol="CHF"
+                                                            data-src="flags/chf.png">Swiss Francs (CHF)</option>
+                                                        <option value="85" data-symbol="TWD"
+                                                            data-src="flags/twd.png">Taiwan Dollar (TWD)</option>
+                                                        <option value="19" data-symbol="THB"
+                                                            data-src="flags/thb.png">Thai Baht (THB)</option>
+                                                        <option value="61" data-symbol="TTD"
+                                                            data-src="flags/ttd.png">Trinidad &amp; Tobago Dollar (TTD)</option>
+                                                        <option value="16" data-symbol="TRY"
+                                                            data-src="flags/try.png">Turkish Lira (TRY)</option>
+                                                        <option value="21" data-symbol="AED"
+                                                            data-src="flags/aed.png">UAE Dirham (AED)</option>
+                                                        <option value="88" data-symbol="UYU"
+                                                            data-src="flags/uyu.png">Uruguay Peso (UYU)</option>
+                                                        <option value="89" data-symbol="VND"
+                                                            data-src="flags/vnd.png">Vietnam Dong (VND)</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="chart_container">
+                                                <h4 class="chart_heading">Euro Travel Money exchange rate over the last week</h4>
+                                                <canvas id="myChart"></canvas>
+                                                <h5 class="chart_subHeading">The current Euro rate is 1.15774</h5>
+                                            </div>
+                                            <div class="form_fields">
+                                                <h5>set Target rate</h5>
+                                                <div class="form-group">
+                                                    <label for="traget-rate" class="required">Target Rate</label>
+                                                    <div class="input_group">
+                                                        <input type="text" class="form-control" id="traget-rate" name="traget-rate" placeholder="1.15774" required>
+                                                        <span class="img_container">
+                                                            <img src="flags/bbd.png" alt="flag" height="34" width="34">
+                                                        </span>
+                                                    </div>
+                                                    <span class="invalid">Please enter a target rate</span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="expiry-date" class="required">Expiry Date</label>
+                                                    <div class="input_group">
+                                                        <input type="date" class="form-control" id="expiry-date" name="expiry-date" required>
+                                                        <span class="date_container"></span>
+                                                    </div>
+                                                    <span class="invalid">Please enter an expiry date</span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="mobile" class="required">Your Mobile Number</label>
+                                                    <div class="phone_input_wrapper">
+                                                        <div class="phone_container">
+                                                            <select id="country-code" name="country-code"></select>
+                                                        </div>
+                                                        <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" required>
+                                                    </div>
+                                                    <span class="invalid">Please enter your mobile number</span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="">Alert preferences</label>
+                                                    <div class="radio-group">
+                                                        <label class="radio-label">
+                                                            <input type="radio" name="contact" value="sms" checked>
+                                                            <span class="radio-outer">
+                                                                <span class="radio-inner"></span>
+                                                            </span>
+                                                            <span>SMS Only</span>
+                                                        </label>
+                                                        <label class="radio-label">
+                                                            <input type="radio" name="contact" value="email">
+                                                            <span class="radio-outer">
+                                                                <span class="radio-inner"></span>
+                                                            </span>
+                                                            <span>Email Only</span>
+                                                        </label>
+                                                        <label class="radio-label">
+                                                            <input type="radio" name="contact" value="both">
+                                                            <span class="radio-outer">
+                                                                <span class="radio-inner"></span>
+                                                            </span>
+                                                            <span>SMS & Email</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group align-items-center">
+                                                    <label class="checkbox-label">
+                                                        <input type="checkbox" name="check-consent" required>
+                                                        <span class="checkbox-outer">
+                                                            <svg class="checkbox-check" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <polyline points="2,6 5,9 10,3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>
+                                                        </span>
+                                                        <span class="required consent">Notify me when 1 GBP goes above 1.15774 EUR for Travel Money Exchange.  By creating a rate alert, you accept the <a href="#" class="text-decoration-underline">Rate Watch terms.</a><b style="color:#d22d60;">*</b>
+                                                        </span>
+                                                    </label>
+                                                    <span class="invalid">Please tick the box to confirm you agree to be notified.</span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <button id="buy-button-rate-alert" name="button-rate-alert" class="button">Set Rate Alert</button>
+                                                </div>
+                                                <div class="form-group">
+                                                    <a href="#" class="primary_link">Manage my Alerts</a>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <div class="rw_summary">
+                                            <span>Rate Watch always shows the latest Travel FX exchange rate for the product you selected. Exchange rates move frequently and the current rate might not be available for long. Exchange rates from Travel FX are not guaranteed until the order is complete.</span>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="sellTravel">
+                                        <form id="sell" name="sell" action="https://www.travelfx.co.uk/home-buy-order" method="post">
+                                            <div class="form-group">
+                                                <div class="currency_select">
+                                                    <select id="homeSellTravel" name="homeSellTravel">
+                                                        <option selected="selected" value="11" data-symbol="EUR"
+                                                            data-src="flags/eur.png">Euros (EUR)</option>
+                                                        <option value="12" data-symbol="USD"
+                                                            data-src="flags/usd.png">US Dollars (USD)</option>
+                                                        <option value="13" data-symbol="AUD"
+                                                            data-src="flags/aud.png">Australian Dollars (AUD)</option>
+                                                        <option value="30" data-symbol="BBD"
+                                                            data-src="flags/bbd.png">Barbados Dollar (BBD)</option>
+                                                        <option value="64" data-symbol="BAM"
+                                                            data-src="flags/bam.png">Bosnia Maraka (BAM)</option>
+                                                        <option value="31" data-symbol="BRL"
+                                                            data-src="flags/brl.png">Brazilian Real (BRL)</option>
+                                                        <option value="65" data-symbol="BND"
+                                                            data-src="flags/bnd.png">Brunei Dollar (BND)</option>
+                                                        <option value="14" data-symbol="CAD"
+                                                            data-src="flags/cad.png">Canadian Dollars (CAD)</option>
+                                                        <option value="33" data-symbol="CLP"
+                                                            data-src="flags/clp.png">Chilean Peso (CLP)</option>
+                                                        <option value="34" data-symbol="CNY"
+                                                            data-src="flags/cny.png">Chinese Yuan (CNY)</option>
+                                                        <option value="68" data-symbol="COP"
+                                                            data-src="flags/cop.png">Colombia Peso (COP)</option>
+                                                        <option value="69" data-symbol="CRC"
+                                                            data-src="flags/crc.png">Costa Rica Colon (CRC)</option>
+                                                        <option value="36" data-symbol="CZK"
+                                                            data-src="flags/czk.png">Czech Koruna (CZK)</option>
+                                                        <option value="38" data-symbol="DOP"
+                                                            data-src="flags/dop.png">Dominican Republic Peso (DOP)</option>
+                                                        <option value="39" data-symbol="XCD"
+                                                            data-src="flags/xcd.png">East Caribbean Dollar (XCD)</option>
+                                                        <option value="42" data-symbol="FJD"
+                                                            data-src="flags/fjd.png">Fiji Dollar (FJD)</option>
+                                                        <option value="25" data-symbol="HKD"
+                                                            data-src="flags/hkd.png">Hong Kong Dollars (HKD)</option>
+                                                        <option value="24" data-symbol="HUF"
+                                                            data-src="flags/huf.png">Hungarian Forint (HUF)</option>
+                                                        <option value="43" data-symbol="ISK"
+                                                            data-src="flags/isk.png">Icelandic Krona (ISK)</option>
+                                                        <option value="73" data-symbol="INR"
+                                                            data-src="flags/inr.png">India Rupee (INR)</option>
+                                                        <option value="44" data-symbol="IDR"
+                                                            data-src="flags/idr.png">Indonesian Rupiah (IDR)</option>
+                                                        <option value="45" data-symbol="ILS"
+                                                            data-src="flags/ils.png">Israeli Shekel (ILS)</option>
+                                                        <option value="46" data-symbol="JMD"
+                                                            data-src="flags/jmd.png">Jamaican Dollar (JMD)</option>
+                                                        <option value="22" data-symbol="JPY"
+                                                            data-src="flags/jpy.png">Japanese Yen (JPY)</option>
+                                                        <option value="47" data-symbol="JOD"
+                                                            data-src="flags/jod.png">Jordan Dinar (JOD)</option>
+                                                        <option value="48" data-symbol="KES"
+                                                            data-src="flags/kes.png">Kenyan Shilling (KES)</option>
+                                                        <option value="26" data-symbol="MYR"
+                                                            data-src="flags/myr.png">Malaysian Ringgit (MYR)</option>
+                                                        <option value="51" data-symbol="MUR"
+                                                            data-src="flags/mur.png">Mauritian Rupee (MUR)</option>
+                                                        <option value="52" data-symbol="MXN"
+                                                            data-src="flags/mxn.png">Mexican Peso (MXN)</option>
+                                                        <option value="17" data-symbol="NZD"
+                                                            data-src="flags/nzd.png">New Zealand Dollar (NZD)</option>
+                                                        <option value="53" data-symbol="NOK"
+                                                            data-src="flags/nok.png">Norwegian Krone (NOK)</option>
+                                                        <option value="81" data-symbol="PEN"
+                                                            data-src="flags/pen.png">Peru Nuevos Sol (PEN)</option>
+                                                        <option value="55" data-symbol="PHP"
+                                                            data-src="flags/php.png">Phillipino Peso (PHP)</option>
+                                                        <option value="23" data-symbol="PLN"
+                                                            data-src="flags/pln.png">Polish Zloty (PLN)</option>
+                                                        <option value="57" data-symbol="RON"
+                                                            data-src="flags/ron.png">Romanian Leu (RON)</option>
+                                                        <option value="20" data-symbol="SGD"
+                                                            data-src="flags/sgd.png">Singapore Dollars (SGD)</option>
+                                                        <option value="15" data-symbol="ZAR"
+                                                            data-src="flags/zar.png">South African Rand (ZAR)</option>
+                                                        <option value="74" data-symbol="KRW"
+                                                            data-src="flags/krw.png">South Korea Won (KRW)</option>
+                                                        <option value="59" data-symbol="SEK"
+                                                            data-src="flags/sek.png">Swedish Krona (SEK)</option>
+                                                        <option value="18" data-symbol="CHF"
+                                                            data-src="flags/chf.png">Swiss Francs (CHF)</option>
+                                                        <option value="85" data-symbol="TWD"
+                                                            data-src="flags/twd.png">Taiwan Dollar (TWD)</option>
+                                                        <option value="19" data-symbol="THB"
+                                                            data-src="flags/thb.png">Thai Baht (THB)</option>
+                                                        <option value="61" data-symbol="TTD"
+                                                            data-src="flags/ttd.png">Trinidad &amp; Tobago Dollar (TTD)</option>
+                                                        <option value="16" data-symbol="TRY"
+                                                            data-src="flags/try.png">Turkish Lira (TRY)</option>
+                                                        <option value="21" data-symbol="AED"
+                                                            data-src="flags/aed.png">UAE Dirham (AED)</option>
+                                                        <option value="88" data-symbol="UYU"
+                                                            data-src="flags/uyu.png">Uruguay Peso (UYU)</option>
+                                                        <option value="89" data-symbol="VND"
+                                                            data-src="flags/vnd.png">Vietnam Dong (VND)</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="chart_container">
+                                                <h4 class="chart_heading">Euro Buyback exchange rate over the last week</h4>
+                                                <canvas id="sellTravelChart"></canvas>
+                                                <h5 class="chart_subHeading">The current Euro rate is 1.15774</h5>
+                                            </div>
+                                            <div class="form_fields">
+                                                <h5>set Target rate</h5>
+                                                <div class="form-group">
+                                                    <label for="sell-traget-rate" class="required">Target Rate</label>
+                                                    <div class="input_group">
+                                                        <input type="text" class="form-control" id="sell-traget-rate" name="sell-traget-rate" placeholder="1.15774" required>
+                                                        <span class="img_container">
+                                                            <img src="flags/bbd.png" alt="flag" height="34" width="34">
+                                                        </span>
+                                                    </div>
+                                                    <span class="invalid">Please enter a target rate</span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="sell-expiry-date" class="required">Expiry Date</label>
+                                                    <div class="input_group">
+                                                        <input type="date" class="form-control" id="sell-expiry-date" name="expiry-date" required>
+                                                        <span class="date_container"></span>
+                                                    </div>
+                                                    <span class="invalid">Please enter an expiry date</span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="sell-mobile" class="required">Your Mobile Number</label>
+                                                    <div class="phone_input_wrapper">
+                                                        <div class="phone_container">
+                                                            <select id="sell-country-code" class="country-code" name="country-code"></select>
+                                                        </div>
+                                                        <input type="tel" id="sell-mobile" name="sell-mobile" placeholder="Enter your mobile number" required>
+                                                    </div>
+                                                    <span class="invalid">Please enter your mobile number</span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="">Alert preferences</label>
+                                                    <div class="radio-group">
+                                                        <label class="radio-label">
+                                                            <input type="radio" name="contact" value="sms" checked>
+                                                            <span class="radio-outer">
+                                                                <span class="radio-inner"></span>
+                                                            </span>
+                                                            <span>SMS Only</span>
+                                                        </label>
+                                                        <label class="radio-label">
+                                                            <input type="radio" name="contact" value="email">
+                                                            <span class="radio-outer">
+                                                                <span class="radio-inner"></span>
+                                                            </span>
+                                                            <span>Email Only</span>
+                                                        </label>
+                                                        <label class="radio-label">
+                                                            <input type="radio" name="contact" value="both">
+                                                            <span class="radio-outer">
+                                                                <span class="radio-inner"></span>
+                                                            </span>
+                                                            <span>SMS & Email</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group align-items-center">
+                                                    <label class="checkbox-label">
+                                                        <input type="checkbox" name="check-consent" required>
+                                                        <span class="checkbox-outer">
+                                                            <svg class="checkbox-check" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <polyline points="2,6 5,9 10,3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>
+                                                        </span>
+                                                        <span class="required consent">Notify me when 1 GBP goes above 1.15774 EUR for Travel Money Exchange.  By creating a rate alert, you accept the <a href="#" class="text-decoration-underline">Rate Watch terms.</a> <b style="color:#d22d60;">*</b>
+                                                        </span>
+                                                    </label>
+                                                    <span class="invalid">Please tick the box to confirm you agree to be notified.</span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <button id="sell-button-rate-alert" name="button-rate-alert" class="button">Set Rate Alert</button>
+                                                </div>
+                                                <div class="form-group">
+                                                    <a href="#" class="primary_link">Manage my Alerts</a>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <div class="rw_summary">
+                                            <span>Rate Watch always shows the latest Travel FX exchange rate for the product you selected. Exchange rates move frequently and the current rate might not be available for long. Exchange rates from Travel FX are not guaranteed until the order is complete.</span>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="internationalTransfer">
+                                        <form id="internationalTransferForm" name="internationalTransferForm" action="https://www.travelfx.co.uk/home-buy-order" method="post">
+                                            <div class="form-group currency_box">
+                                                <label for="youSendCurrency">You send us</label>
+                                                <div class="currency_select">
+                                                    <select id="youSendCurrency" name="youSendCurrency">
+                                                        <option selected="selected" value="11" data-symbol="EUR"
+                                                            data-src="flags/eur.png">Euros (EUR)</option>
+                                                        <option value="12" data-symbol="USD"
+                                                            data-src="flags/usd.png">US Dollars (USD)</option>
+                                                        <option value="13" data-symbol="AUD"
+                                                            data-src="flags/aud.png">Australian Dollars (AUD)</option>
+                                                        <option value="30" data-symbol="BBD"
+                                                            data-src="flags/bbd.png">Barbados Dollar (BBD)</option>
+                                                        <option value="64" data-symbol="BAM"
+                                                            data-src="flags/bam.png">Bosnia Maraka (BAM)</option>
+                                                        <option value="31" data-symbol="BRL"
+                                                            data-src="flags/brl.png">Brazilian Real (BRL)</option>
+                                                        <option value="65" data-symbol="BND"
+                                                            data-src="flags/bnd.png">Brunei Dollar (BND)</option>
+                                                        <option value="14" data-symbol="CAD"
+                                                            data-src="flags/cad.png">Canadian Dollars (CAD)</option>
+                                                        <option value="33" data-symbol="CLP"
+                                                            data-src="flags/clp.png">Chilean Peso (CLP)</option>
+                                                        <option value="34" data-symbol="CNY"
+                                                            data-src="flags/cny.png">Chinese Yuan (CNY)</option>
+                                                        <option value="68" data-symbol="COP"
+                                                            data-src="flags/cop.png">Colombia Peso (COP)</option>
+                                                        <option value="69" data-symbol="CRC"
+                                                            data-src="flags/crc.png">Costa Rica Colon (CRC)</option>
+                                                        <option value="36" data-symbol="CZK"
+                                                            data-src="flags/czk.png">Czech Koruna (CZK)</option>
+                                                        <option value="38" data-symbol="DOP"
+                                                            data-src="flags/dop.png">Dominican Republic Peso (DOP)</option>
+                                                        <option value="39" data-symbol="XCD"
+                                                            data-src="flags/xcd.png">East Caribbean Dollar (XCD)</option>
+                                                        <option value="42" data-symbol="FJD"
+                                                            data-src="flags/fjd.png">Fiji Dollar (FJD)</option>
+                                                        <option value="25" data-symbol="HKD"
+                                                            data-src="flags/hkd.png">Hong Kong Dollars (HKD)</option>
+                                                        <option value="24" data-symbol="HUF"
+                                                            data-src="flags/huf.png">Hungarian Forint (HUF)</option>
+                                                        <option value="43" data-symbol="ISK"
+                                                            data-src="flags/isk.png">Icelandic Krona (ISK)</option>
+                                                        <option value="73" data-symbol="INR"
+                                                            data-src="flags/inr.png">India Rupee (INR)</option>
+                                                        <option value="44" data-symbol="IDR"
+                                                            data-src="flags/idr.png">Indonesian Rupiah (IDR)</option>
+                                                        <option value="45" data-symbol="ILS"
+                                                            data-src="flags/ils.png">Israeli Shekel (ILS)</option>
+                                                        <option value="46" data-symbol="JMD"
+                                                            data-src="flags/jmd.png">Jamaican Dollar (JMD)</option>
+                                                        <option value="22" data-symbol="JPY"
+                                                            data-src="flags/jpy.png">Japanese Yen (JPY)</option>
+                                                        <option value="47" data-symbol="JOD"
+                                                            data-src="flags/jod.png">Jordan Dinar (JOD)</option>
+                                                        <option value="48" data-symbol="KES"
+                                                            data-src="flags/kes.png">Kenyan Shilling (KES)</option>
+                                                        <option value="26" data-symbol="MYR"
+                                                            data-src="flags/myr.png">Malaysian Ringgit (MYR)</option>
+                                                        <option value="51" data-symbol="MUR"
+                                                            data-src="flags/mur.png">Mauritian Rupee (MUR)</option>
+                                                        <option value="52" data-symbol="MXN"
+                                                            data-src="flags/mxn.png">Mexican Peso (MXN)</option>
+                                                        <option value="17" data-symbol="NZD"
+                                                            data-src="flags/nzd.png">New Zealand Dollar (NZD)</option>
+                                                        <option value="53" data-symbol="NOK"
+                                                            data-src="flags/nok.png">Norwegian Krone (NOK)</option>
+                                                        <option value="81" data-symbol="PEN"
+                                                            data-src="flags/pen.png">Peru Nuevos Sol (PEN)</option>
+                                                        <option value="55" data-symbol="PHP"
+                                                            data-src="flags/php.png">Phillipino Peso (PHP)</option>
+                                                        <option value="23" data-symbol="PLN"
+                                                            data-src="flags/pln.png">Polish Zloty (PLN)</option>
+                                                        <option value="57" data-symbol="RON"
+                                                            data-src="flags/ron.png">Romanian Leu (RON)</option>
+                                                        <option value="20" data-symbol="SGD"
+                                                            data-src="flags/sgd.png">Singapore Dollars (SGD)</option>
+                                                        <option value="15" data-symbol="ZAR"
+                                                            data-src="flags/zar.png">South African Rand (ZAR)</option>
+                                                        <option value="74" data-symbol="KRW"
+                                                            data-src="flags/krw.png">South Korea Won (KRW)</option>
+                                                        <option value="59" data-symbol="SEK"
+                                                            data-src="flags/sek.png">Swedish Krona (SEK)</option>
+                                                        <option value="18" data-symbol="CHF"
+                                                            data-src="flags/chf.png">Swiss Francs (CHF)</option>
+                                                        <option value="85" data-symbol="TWD"
+                                                            data-src="flags/twd.png">Taiwan Dollar (TWD)</option>
+                                                        <option value="19" data-symbol="THB"
+                                                            data-src="flags/thb.png">Thai Baht (THB)</option>
+                                                        <option value="61" data-symbol="TTD"
+                                                            data-src="flags/ttd.png">Trinidad &amp; Tobago Dollar (TTD)</option>
+                                                        <option value="16" data-symbol="TRY"
+                                                            data-src="flags/try.png">Turkish Lira (TRY)</option>
+                                                        <option value="21" data-symbol="AED"
+                                                            data-src="flags/aed.png">UAE Dirham (AED)</option>
+                                                        <option value="88" data-symbol="UYU"
+                                                            data-src="flags/uyu.png">Uruguay Peso (UYU)</option>
+                                                        <option value="89" data-symbol="VND"
+                                                            data-src="flags/vnd.png">Vietnam Dong (VND)</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group currency_box">
+                                                <img src="./images/arrow-down-green.svg" alt="arrow down" width="24" height="24">
+                                            </div>
+                                            <div class="form-group currency_box">
+                                                <label for="recipientGets">You send us</label>
+                                                <div class="currency_select">
+                                                    <select id="recipientGets" name="recipientGets">
+                                                        <option selected="selected" value="11" data-symbol="EUR"
+                                                            data-src="flags/eur.png">Euros (EUR)</option>
+                                                        <option value="12" data-symbol="USD"
+                                                            data-src="flags/usd.png">US Dollars (USD)</option>
+                                                        <option value="13" data-symbol="AUD"
+                                                            data-src="flags/aud.png">Australian Dollars (AUD)</option>
+                                                        <option value="30" data-symbol="BBD"
+                                                            data-src="flags/bbd.png">Barbados Dollar (BBD)</option>
+                                                        <option value="64" data-symbol="BAM"
+                                                            data-src="flags/bam.png">Bosnia Maraka (BAM)</option>
+                                                        <option value="31" data-symbol="BRL"
+                                                            data-src="flags/brl.png">Brazilian Real (BRL)</option>
+                                                        <option value="65" data-symbol="BND"
+                                                            data-src="flags/bnd.png">Brunei Dollar (BND)</option>
+                                                        <option value="14" data-symbol="CAD"
+                                                            data-src="flags/cad.png">Canadian Dollars (CAD)</option>
+                                                        <option value="33" data-symbol="CLP"
+                                                            data-src="flags/clp.png">Chilean Peso (CLP)</option>
+                                                        <option value="34" data-symbol="CNY"
+                                                            data-src="flags/cny.png">Chinese Yuan (CNY)</option>
+                                                        <option value="68" data-symbol="COP"
+                                                            data-src="flags/cop.png">Colombia Peso (COP)</option>
+                                                        <option value="69" data-symbol="CRC"
+                                                            data-src="flags/crc.png">Costa Rica Colon (CRC)</option>
+                                                        <option value="36" data-symbol="CZK"
+                                                            data-src="flags/czk.png">Czech Koruna (CZK)</option>
+                                                        <option value="38" data-symbol="DOP"
+                                                            data-src="flags/dop.png">Dominican Republic Peso (DOP)</option>
+                                                        <option value="39" data-symbol="XCD"
+                                                            data-src="flags/xcd.png">East Caribbean Dollar (XCD)</option>
+                                                        <option value="42" data-symbol="FJD"
+                                                            data-src="flags/fjd.png">Fiji Dollar (FJD)</option>
+                                                        <option value="25" data-symbol="HKD"
+                                                            data-src="flags/hkd.png">Hong Kong Dollars (HKD)</option>
+                                                        <option value="24" data-symbol="HUF"
+                                                            data-src="flags/huf.png">Hungarian Forint (HUF)</option>
+                                                        <option value="43" data-symbol="ISK"
+                                                            data-src="flags/isk.png">Icelandic Krona (ISK)</option>
+                                                        <option value="73" data-symbol="INR"
+                                                            data-src="flags/inr.png">India Rupee (INR)</option>
+                                                        <option value="44" data-symbol="IDR"
+                                                            data-src="flags/idr.png">Indonesian Rupiah (IDR)</option>
+                                                        <option value="45" data-symbol="ILS"
+                                                            data-src="flags/ils.png">Israeli Shekel (ILS)</option>
+                                                        <option value="46" data-symbol="JMD"
+                                                            data-src="flags/jmd.png">Jamaican Dollar (JMD)</option>
+                                                        <option value="22" data-symbol="JPY"
+                                                            data-src="flags/jpy.png">Japanese Yen (JPY)</option>
+                                                        <option value="47" data-symbol="JOD"
+                                                            data-src="flags/jod.png">Jordan Dinar (JOD)</option>
+                                                        <option value="48" data-symbol="KES"
+                                                            data-src="flags/kes.png">Kenyan Shilling (KES)</option>
+                                                        <option value="26" data-symbol="MYR"
+                                                            data-src="flags/myr.png">Malaysian Ringgit (MYR)</option>
+                                                        <option value="51" data-symbol="MUR"
+                                                            data-src="flags/mur.png">Mauritian Rupee (MUR)</option>
+                                                        <option value="52" data-symbol="MXN"
+                                                            data-src="flags/mxn.png">Mexican Peso (MXN)</option>
+                                                        <option value="17" data-symbol="NZD"
+                                                            data-src="flags/nzd.png">New Zealand Dollar (NZD)</option>
+                                                        <option value="53" data-symbol="NOK"
+                                                            data-src="flags/nok.png">Norwegian Krone (NOK)</option>
+                                                        <option value="81" data-symbol="PEN"
+                                                            data-src="flags/pen.png">Peru Nuevos Sol (PEN)</option>
+                                                        <option value="55" data-symbol="PHP"
+                                                            data-src="flags/php.png">Phillipino Peso (PHP)</option>
+                                                        <option value="23" data-symbol="PLN"
+                                                            data-src="flags/pln.png">Polish Zloty (PLN)</option>
+                                                        <option value="57" data-symbol="RON"
+                                                            data-src="flags/ron.png">Romanian Leu (RON)</option>
+                                                        <option value="20" data-symbol="SGD"
+                                                            data-src="flags/sgd.png">Singapore Dollars (SGD)</option>
+                                                        <option value="15" data-symbol="ZAR"
+                                                            data-src="flags/zar.png">South African Rand (ZAR)</option>
+                                                        <option value="74" data-symbol="KRW"
+                                                            data-src="flags/krw.png">South Korea Won (KRW)</option>
+                                                        <option value="59" data-symbol="SEK"
+                                                            data-src="flags/sek.png">Swedish Krona (SEK)</option>
+                                                        <option value="18" data-symbol="CHF"
+                                                            data-src="flags/chf.png">Swiss Francs (CHF)</option>
+                                                        <option value="85" data-symbol="TWD"
+                                                            data-src="flags/twd.png">Taiwan Dollar (TWD)</option>
+                                                        <option value="19" data-symbol="THB"
+                                                            data-src="flags/thb.png">Thai Baht (THB)</option>
+                                                        <option value="61" data-symbol="TTD"
+                                                            data-src="flags/ttd.png">Trinidad &amp; Tobago Dollar (TTD)</option>
+                                                        <option value="16" data-symbol="TRY"
+                                                            data-src="flags/try.png">Turkish Lira (TRY)</option>
+                                                        <option value="21" data-symbol="AED"
+                                                            data-src="flags/aed.png">UAE Dirham (AED)</option>
+                                                        <option value="88" data-symbol="UYU"
+                                                            data-src="flags/uyu.png">Uruguay Peso (UYU)</option>
+                                                        <option value="89" data-symbol="VND"
+                                                            data-src="flags/vnd.png">Vietnam Dong (VND)</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="chart_container">
+                                                <h4 class="chart_heading">Euro Buyback exchange rate over the last week</h4>
+                                                <canvas id="internationalTransferChart"></canvas>
+                                                <h5 class="chart_subHeading">The current Euro rate is 1.15774</h5>
+                                            </div>
+                                            <div class="form_fields">
+                                                <h5>set Target rate</h5>
+                                                <div class="form-group">
+                                                    <label for="international-traget-rate" class="required">Target Rate</label>
+                                                    <div class="input_group">
+                                                        <input type="text" class="form-control" id="international-traget-rate" name="international-traget-rate" placeholder="1.15774" required>
+                                                        <span class="img_container">
+                                                            <img src="flags/bbd.png" alt="flag" height="34" width="34">
+                                                        </span>
+                                                    </div>
+                                                    <span class="invalid">Please enter a target rate</span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="international-expiry-date" class="required">Expiry Date</label>
+                                                    <div class="input_group">
+                                                        <input type="date" class="form-control" id="international-expiry-date" name="expiry-date" required>
+                                                        <span class="date_container"></span>
+                                                    </div>
+                                                    <span class="invalid">Please enter an expiry date</span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="international-mobile" class="required">Your Mobile Number</label>
+                                                    <div class="phone_input_wrapper">
+                                                        <div class="phone_container">
+                                                            <select id="international-country-code" class="country-code" name="country-code"></select>
+                                                        </div>
+                                                        <input type="tel" id="international-mobile" name="international-mobile" placeholder="Enter your mobile number" required>
+                                                    </div>
+                                                    <span class="invalid">Please enter your mobile number</span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="">Alert preferences</label>
+                                                    <div class="radio-group">
+                                                        <label class="radio-label">
+                                                            <input type="radio" name="contact" value="sms" checked>
+                                                            <span class="radio-outer">
+                                                                <span class="radio-inner"></span>
+                                                            </span>
+                                                            <span>SMS Only</span>
+                                                        </label>
+                                                        <label class="radio-label">
+                                                            <input type="radio" name="contact" value="email">
+                                                            <span class="radio-outer">
+                                                                <span class="radio-inner"></span>
+                                                            </span>
+                                                            <span>Email Only</span>
+                                                        </label>
+                                                        <label class="radio-label">
+                                                            <input type="radio" name="contact" value="both">
+                                                            <span class="radio-outer">
+                                                                <span class="radio-inner"></span>
+                                                            </span>
+                                                            <span>SMS & Email</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group align-items-center">
+                                                    <label class="checkbox-label">
+                                                        <input type="checkbox" name="check-consent" required>
+                                                        <span class="checkbox-outer">
+                                                            <svg class="checkbox-check" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <polyline points="2,6 5,9 10,3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>
+                                                        </span>
+                                                        <span class="required consent">Notify me when 1 GBP goes above 1.15774 EUR for Travel Money Exchange.  By creating a rate alert, you accept the <a href="#" class="text-decoration-underline">Rate Watch terms.</a><b style="color:#d22d60;">*</b>
+                                                        </span>
+                                                    </label>
+                                                    <span class="invalid">Please tick the box to confirm you agree to be notified.</span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <button id="button-rate-alert" name="button-rate-alert" class="button">Set Rate Alert</button>
+                                                </div>
+                                                <div class="form-group">
+                                                    <a href="#" class="primary_link">Manage my Alerts</a>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <div class="rw_summary">
+                                            <span>Rate Watch always shows the latest Travel FX exchange rate for the product you selected. Exchange rates move frequently and the current rate might not be available for long. Exchange rates from Travel FX are not guaranteed until the order is complete.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- Footer -->
+    <footer id="footer" class="newfooter client_foot">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-lg-right text-center ftrlinks-div">
+                    <p>
+                        <a href="travel-fx-privacy-policy">Privacy policy</a>
+                        <a href="travel-fx-terms-and-conditions">Terms & conditions</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <link rel="stylesheet" href="css_ext/jquery-ui.min.css">
+        <script src="js_ext/jquery-ui.min.js"></script>
+        <script src="js_ext/popper260.min.js"></script>
+        <script src="js_ext/bootstrap460.min.js"></script>
+        <script src="js_ext/tom-select172.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="js/generalb1be.js"></script>
+    </footer>
+</body>
+</html>
