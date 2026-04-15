@@ -459,7 +459,7 @@
                                     <h2>Rate Alerts</h2>
                                 </div>
                                 <div class="col-md-6 col-auto text-right">
-                                    <a href="#" class="secondary_btn">Set another alert <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 12l14 0" /><path d="M15 16l4 -4" /><path d="M15 8l4 4" /></svg></a>
+                                    <a href="./client_rate_watch.html" class="secondary_btn">Back to Rate Alert Page<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 12l14 0" /><path d="M15 16l4 -4" /><path d="M15 8l4 4" /></svg></a>
                                 </div>
                             </div>
                         </div>
@@ -468,30 +468,27 @@
                             <div class="sub_form_tab">
                                 <ul class="nav nav-pills">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#buyTravel" data-toggle="tab">
-                                            <img src="./images/buy-travel.png" class="img_default" alt="Buy travel" width="30" height="30" >
-                                            <img src="./images/buy-travel-white.png" class="img_active" alt="Buy travel" width="30" height="30" >
-                                            <h5>Buy travel money rate</h5>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#sellTravel" data-toggle="tab">
-                                            <img src="./images/sell-travel.png" class="img_default" alt="Sell travel" width="30" height="30" >
-                                            <img src="./images/sell-travel-white.png" class="img_active" alt="Sell travel" width="30" height="30" >
-                                            <h5>Sell Travel money rate</h5>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#internationalTransfer" data-toggle="tab">
-                                            <img src="./images/internation-travel.png" class="img_default" alt="International transfer" width="30" height="30" >
-                                            <img src="./images/internation-travel-white.png" class="img_active" alt="International transfer" width="30" height="30" >
-                                            <h5>International Transfer rate</h5>
-                                        </a>
-                                    </li>
+                                            <a class="nav-link active" href="#buyTravel" data-toggle="tab">
+                                                <img src="./images/buy-travel.svg" class="img_active" alt="Buy travel" width="30" height="30" >
+                                                <h5>Buy travel money rate</h5>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#sellTravel" data-toggle="tab">
+                                                <img src="./images/sell-travel.svg" class="img_active" alt="Sell travel" width="30" height="30" >
+                                                <h5>Sell Travel money rate</h5>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#internationalTransfer" data-toggle="tab">
+                                                <img src="./images/internation-travel.svg" class="img_active" alt="International transfer" width="30" height="30">
+                                                <h5>International Transfer rate</h5>
+                                            </a>
+                                        </li>
                                 </ul>
                                 <div class="tab-content clearfix">
-                                    <div class="tab-pane" id="buyTravel">
-                                        <form id="buy" name="buy" action="https://www.travelfx.co.uk/home-buy-order" method="post">
+                                    <div class="tab-pane active" id="buyTravel">
+                                        <form id="buy" name="buy" action="" method="post">
                                             <div class="form-group">
                                                 <div class="currency_select">
                                                     <select id="BuyTravelMoney_1" name="BuyTravelMoney_1">
@@ -602,9 +599,9 @@
                                                 <div class="form-group">
                                                     <label for="traget-rate" class="required">Target Rate</label>
                                                     <div class="input_group">
-                                                        <input type="text" class="form-control" id="traget-rate" name="traget-rate" placeholder="1.15774" required>
+                                                        <input type="number" step="0.00001" class="form-control" id="traget-rate" name="traget-rate" placeholder="1.15774" required>
                                                         <span class="img_container">
-                                                            <img src="flags/bbd.png" alt="flag" height="34" width="34">
+                                                            <img src="flags/eur.png" alt="flag" height="34" width="34">
                                                         </span>
                                                     </div>
                                                     <span class="invalid">Please enter a target rate</span>
@@ -623,7 +620,7 @@
                                                         <div class="phone_container">
                                                             <select id="country-code" name="country-code"></select>
                                                         </div>
-                                                        <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" required>
+                                                        <input type="tel" pattern="[0-9]{10}" maxlength="10" id="mobile" name="mobile" placeholder="Enter your mobile number" required>
                                                     </div>
                                                     <span class="invalid">Please enter your mobile number</span>
                                                 </div>
@@ -661,7 +658,7 @@
                                                             <polyline points="2,6 5,9 10,3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                                             </svg>
                                                         </span>
-                                                        <span class="required consent">Notify me when 1 GBP goes above 1.15774 EUR for Travel Money Exchange.  By creating a rate alert, you accept the <a href="#" class="text-decoration-underline">Rate Watch terms.</a><b style="color:#d22d60;">*</b>
+                                                        <span class="required consent">I agree to be contacted by Travel FX via SMS and/or email when my selected exchange rate is reached. <b style="color:#d22d60;">*</b>
                                                         </span>
                                                     </label>
                                                     <span class="invalid">Please tick the box to confirm you agree to be notified.</span>
@@ -790,9 +787,9 @@
                                                 <div class="form-group">
                                                     <label for="sell-traget-rate" class="required">Target Rate</label>
                                                     <div class="input_group">
-                                                        <input type="text" class="form-control" id="sell-traget-rate" name="sell-traget-rate" placeholder="1.15774" required>
+                                                        <input type="number" step="0.00001" class="form-control" id="sell-traget-rate" name="sell-traget-rate" placeholder="1.15774" required>
                                                         <span class="img_container">
-                                                            <img src="flags/bbd.png" alt="flag" height="34" width="34">
+                                                            <img src="flags/eur.png" alt="flag" height="34" width="34">
                                                         </span>
                                                     </div>
                                                     <span class="invalid">Please enter a target rate</span>
@@ -811,7 +808,7 @@
                                                         <div class="phone_container">
                                                             <select id="sell-country-code" class="country-code" name="country-code"></select>
                                                         </div>
-                                                        <input type="tel" id="sell-mobile" name="sell-mobile" placeholder="Enter your mobile number" required>
+                                                        <input type="tel" pattern="[0-9]{10}" maxlength="10" id="sell-mobile" name="sell-mobile" placeholder="Enter your mobile number" required>
                                                     </div>
                                                     <span class="invalid">Please enter your mobile number</span>
                                                 </div>
@@ -849,7 +846,7 @@
                                                             <polyline points="2,6 5,9 10,3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                                             </svg>
                                                         </span>
-                                                        <span class="required consent">Notify me when 1 GBP goes above 1.15774 EUR for Travel Money Exchange.  By creating a rate alert, you accept the <a href="#" class="text-decoration-underline">Rate Watch terms.</a> <b style="color:#d22d60;">*</b>
+                                                        <span class="required consent">I agree to be contacted by Travel FX via SMS and/or email when my selected exchange rate is reached. <b style="color:#d22d60;">*</b>
                                                         </span>
                                                     </label>
                                                     <span class="invalid">Please tick the box to confirm you agree to be notified.</span>
@@ -972,8 +969,8 @@
                                             <div class="form-group currency_box">
                                                 <img src="./images/arrow-down-green.svg" alt="arrow down" width="24" height="24">
                                             </div>
-                                            <div class="form-group currency_box">
-                                                <label for="recipientGets">You send us</label>
+                                            <div class="form-group currency_box mb-60">
+                                                <label for="recipientGets">Recipient gets</label>
                                                 <div class="currency_select">
                                                     <select id="recipientGets" name="recipientGets">
                                                         <option selected="selected" value="11" data-symbol="EUR"
@@ -1074,7 +1071,7 @@
                                                 </div>
                                             </div>
                                             <div class="chart_container">
-                                                <h4 class="chart_heading">Euro Buyback exchange rate over the last week</h4>
+                                                <h4 class="chart_heading">Euro International Transfer exchange rate over the last week</h4>
                                                 <canvas id="internationalTransferChart"></canvas>
                                                 <h5 class="chart_subHeading">The current Euro rate is 1.15774</h5>
                                             </div>
@@ -1083,9 +1080,9 @@
                                                 <div class="form-group">
                                                     <label for="international-traget-rate" class="required">Target Rate</label>
                                                     <div class="input_group">
-                                                        <input type="text" class="form-control" id="international-traget-rate" name="international-traget-rate" placeholder="1.15774" required>
+                                                        <input type="number" step="0.00001" class="form-control" id="international-traget-rate" name="international-traget-rate" placeholder="1.15774" required>
                                                         <span class="img_container">
-                                                            <img src="flags/bbd.png" alt="flag" height="34" width="34">
+                                                            <img src="flags/eur.png" alt="flag" height="34" width="34">
                                                         </span>
                                                     </div>
                                                     <span class="invalid">Please enter a target rate</span>
@@ -1104,7 +1101,7 @@
                                                         <div class="phone_container">
                                                             <select id="international-country-code" class="country-code" name="country-code"></select>
                                                         </div>
-                                                        <input type="tel" id="international-mobile" name="international-mobile" placeholder="Enter your mobile number" required>
+                                                        <input type="tel" pattern="[0-9]{10}" maxlength="10" id="international-mobile" name="international-mobile" placeholder="Enter your mobile number" required>
                                                     </div>
                                                     <span class="invalid">Please enter your mobile number</span>
                                                 </div>
@@ -1142,7 +1139,7 @@
                                                             <polyline points="2,6 5,9 10,3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                                             </svg>
                                                         </span>
-                                                        <span class="required consent">Notify me when 1 GBP goes above 1.15774 EUR for Travel Money Exchange.  By creating a rate alert, you accept the <a href="#" class="text-decoration-underline">Rate Watch terms.</a><b style="color:#d22d60;">*</b>
+                                                        <span class="required consent">I agree to be contacted by Travel FX via SMS and/or email when my selected exchange rate is reached. <b style="color:#d22d60;">*</b>
                                                         </span>
                                                     </label>
                                                     <span class="invalid">Please tick the box to confirm you agree to be notified.</span>
