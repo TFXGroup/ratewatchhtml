@@ -1280,29 +1280,54 @@ $(document).ready(function () {
     valueField: 'dialCode',
     labelField: 'dialCode',
     searchField: ['country', 'dialCode'],
-    items: ['+1'],          // Default selected — Canada (matching your screenshot)
+    items: ['+44'],          // Default selected — Canada (matching your screenshot)
     controlInput: null,     // Disable typing in control
 
-    options: [
-      { dialCode: '+61',  country: 'Australia',      flag: 'flags/aud.png' },
-      { dialCode: '+1',   country: 'Canada',         flag: 'flags/cad.png' },
-      { dialCode: '+86',  country: 'China',          flag: 'flags/cny.png' },
-      { dialCode: '+91',  country: 'India',          flag: 'flags/inr.png' },
-      { dialCode: '+81',  country: 'Japan',          flag: 'flags/jpy.png' },
-      { dialCode: '+60',  country: 'Malaysia',       flag: 'flags/myr.png' },
-      { dialCode: '+52',  country: 'Mexico',         flag: 'flags/mxn.png' },
-      { dialCode: '+64',  country: 'New Zealand',    flag: 'flags/nzd.png' },
-      { dialCode: '+63',  country: 'Philippines',    flag: 'flags/php.png' },
-      { dialCode: '+65',  country: 'Singapore',      flag: 'flags/sgd.png' },
-      { dialCode: '+27',  country: 'South Africa',   flag: 'flags/zar.png' },
-      { dialCode: '+82',  country: 'South Korea',    flag: 'flags/krw.png' },
-      { dialCode: '+46',  country: 'Sweden',         flag: 'flags/sek.png' },
-      { dialCode: '+41',  country: 'Switzerland',    flag: 'flags/chf.png' },
-      { dialCode: '+66',  country: 'Thailand',       flag: 'flags/thb.png' },
-      { dialCode: '+90',  country: 'Turkey',         flag: 'flags/try.png' },
-      { dialCode: '+971', country: 'UAE',            flag: 'flags/aed.png' },
-      { dialCode: '+1',   country: 'United States',  flag: 'flags/usd.png' },
-      { dialCode: '+84',  country: 'Vietnam',        flag: 'flags/vnd.png' },
+    options : [
+        { dialCode: '+93', country: 'Afghanistan', code: 'af' },
+        { dialCode: '+355', country: 'Albania', code: 'al' },
+        { dialCode: '+213', country: 'Algeria', code: 'dz' },
+        { dialCode: '+61', country: 'Australia', code: 'au' },
+        { dialCode: '+43', country: 'Austria', code: 'at' },
+        { dialCode: '+880', country: 'Bangladesh', code: 'bd' },
+        { dialCode: '+32', country: 'Belgium', code: 'be' },
+        { dialCode: '+55', country: 'Brazil', code: 'br' },
+        { dialCode: '+1', country: 'Canada', code: 'ca' },
+        { dialCode: '+86', country: 'China', code: 'cn' },
+        { dialCode: '+20', country: 'Egypt', code: 'eg' },
+        { dialCode: '+33', country: 'France', code: 'fr' },
+        { dialCode: '+49', country: 'Germany', code: 'de' },
+        { dialCode: '+91', country: 'India', code: 'in' },
+        { dialCode: '+62', country: 'Indonesia', code: 'id' },
+        { dialCode: '+353', country: 'Ireland', code: 'ie' },
+        { dialCode: '+972', country: 'Israel', code: 'il' },
+        { dialCode: '+39', country: 'Italy', code: 'it' },
+        { dialCode: '+81', country: 'Japan', code: 'jp' },
+        { dialCode: '+60', country: 'Malaysia', code: 'my' },
+        { dialCode: '+52', country: 'Mexico', code: 'mx' },
+        { dialCode: '+31', country: 'Netherlands', code: 'nl' },
+        { dialCode: '+64', country: 'New Zealand', code: 'nz' },
+        { dialCode: '+234', country: 'Nigeria', code: 'ng' },
+        { dialCode: '+92', country: 'Pakistan', code: 'pk' },
+        { dialCode: '+63', country: 'Philippines', code: 'ph' },
+        { dialCode: '+48', country: 'Poland', code: 'pl' },
+        { dialCode: '+351', country: 'Portugal', code: 'pt' },
+        { dialCode: '+974', country: 'Qatar', code: 'qa' },
+        { dialCode: '+7', country: 'Russia', code: 'ru' },
+        { dialCode: '+966', country: 'Saudi Arabia', code: 'sa' },
+        { dialCode: '+65', country: 'Singapore', code: 'sg' },
+        { dialCode: '+27', country: 'South Africa', code: 'za' },
+        { dialCode: '+82', country: 'South Korea', code: 'kr' },
+        { dialCode: '+34', country: 'Spain', code: 'es' },
+        { dialCode: '+94', country: 'Sri Lanka', code: 'lk' },
+        { dialCode: '+46', country: 'Sweden', code: 'se' },
+        { dialCode: '+41', country: 'Switzerland', code: 'ch' },
+        { dialCode: '+66', country: 'Thailand', code: 'th' },
+        { dialCode: '+90', country: 'Turkey', code: 'tr' },
+        { dialCode: '+971', country: 'United Arab Emirates', code: 'ae' },
+        { dialCode: '+44', country: 'United Kingdom', code: 'gb' },
+        { dialCode: '+1', country: 'United States', code: 'us' },
+        { dialCode: '+84', country: 'Vietnam', code: 'vn' },
     ],
 
     render: {
@@ -1310,7 +1335,7 @@ $(document).ready(function () {
       item: function(data, escape) {
         return `
           <div class="ts-selected-item">
-            <img src="${escape(data.flag)}" alt="${escape(data.country)}">
+            <img src="../country-code-flags/${data.code}.png" width="30" alt="${escape(data.country)}">
             <span>${escape(data.dialCode)}</span>
           </div>
         `;
@@ -1319,7 +1344,7 @@ $(document).ready(function () {
       option: function(data, escape) {
         return `
           <div class="ts-option-item">
-            <img src="${escape(data.flag)}" alt="${escape(data.country)}">
+            <img src="../country-code-flags/${data.code}.png" width="30" alt="${escape(data.country)}">
             <span class="ts-country-name">${escape(data.country)}</span>
             <span class="ts-country-code">${escape(data.dialCode)}</span>
           </div>
@@ -1335,29 +1360,54 @@ $(document).ready(function () {
     valueField: 'dialCode',
     labelField: 'dialCode',
     searchField: ['country', 'dialCode'],
-    items: ['+1'],          // Default selected — Canada (matching your screenshot)
+    items: ['+44'],          // Default selected — Canada (matching your screenshot)
     controlInput: null,     // Disable typing in control
 
-    options: [
-      { dialCode: '+61',  country: 'Australia',      flag: 'flags/aud.png' },
-      { dialCode: '+1',   country: 'Canada',         flag: 'flags/cad.png' },
-      { dialCode: '+86',  country: 'China',          flag: 'flags/cny.png' },
-      { dialCode: '+91',  country: 'India',          flag: 'flags/inr.png' },
-      { dialCode: '+81',  country: 'Japan',          flag: 'flags/jpy.png' },
-      { dialCode: '+60',  country: 'Malaysia',       flag: 'flags/myr.png' },
-      { dialCode: '+52',  country: 'Mexico',         flag: 'flags/mxn.png' },
-      { dialCode: '+64',  country: 'New Zealand',    flag: 'flags/nzd.png' },
-      { dialCode: '+63',  country: 'Philippines',    flag: 'flags/php.png' },
-      { dialCode: '+65',  country: 'Singapore',      flag: 'flags/sgd.png' },
-      { dialCode: '+27',  country: 'South Africa',   flag: 'flags/zar.png' },
-      { dialCode: '+82',  country: 'South Korea',    flag: 'flags/krw.png' },
-      { dialCode: '+46',  country: 'Sweden',         flag: 'flags/sek.png' },
-      { dialCode: '+41',  country: 'Switzerland',    flag: 'flags/chf.png' },
-      { dialCode: '+66',  country: 'Thailand',       flag: 'flags/thb.png' },
-      { dialCode: '+90',  country: 'Turkey',         flag: 'flags/try.png' },
-      { dialCode: '+971', country: 'UAE',            flag: 'flags/aed.png' },
-      { dialCode: '+1',   country: 'United States',  flag: 'flags/usd.png' },
-      { dialCode: '+84',  country: 'Vietnam',        flag: 'flags/vnd.png' },
+    options : [
+        { dialCode: '+93', country: 'Afghanistan', code: 'af' },
+        { dialCode: '+355', country: 'Albania', code: 'al' },
+        { dialCode: '+213', country: 'Algeria', code: 'dz' },
+        { dialCode: '+61', country: 'Australia', code: 'au' },
+        { dialCode: '+43', country: 'Austria', code: 'at' },
+        { dialCode: '+880', country: 'Bangladesh', code: 'bd' },
+        { dialCode: '+32', country: 'Belgium', code: 'be' },
+        { dialCode: '+55', country: 'Brazil', code: 'br' },
+        { dialCode: '+1', country: 'Canada', code: 'ca' },
+        { dialCode: '+86', country: 'China', code: 'cn' },
+        { dialCode: '+20', country: 'Egypt', code: 'eg' },
+        { dialCode: '+33', country: 'France', code: 'fr' },
+        { dialCode: '+49', country: 'Germany', code: 'de' },
+        { dialCode: '+91', country: 'India', code: 'in' },
+        { dialCode: '+62', country: 'Indonesia', code: 'id' },
+        { dialCode: '+353', country: 'Ireland', code: 'ie' },
+        { dialCode: '+972', country: 'Israel', code: 'il' },
+        { dialCode: '+39', country: 'Italy', code: 'it' },
+        { dialCode: '+81', country: 'Japan', code: 'jp' },
+        { dialCode: '+60', country: 'Malaysia', code: 'my' },
+        { dialCode: '+52', country: 'Mexico', code: 'mx' },
+        { dialCode: '+31', country: 'Netherlands', code: 'nl' },
+        { dialCode: '+64', country: 'New Zealand', code: 'nz' },
+        { dialCode: '+234', country: 'Nigeria', code: 'ng' },
+        { dialCode: '+92', country: 'Pakistan', code: 'pk' },
+        { dialCode: '+63', country: 'Philippines', code: 'ph' },
+        { dialCode: '+48', country: 'Poland', code: 'pl' },
+        { dialCode: '+351', country: 'Portugal', code: 'pt' },
+        { dialCode: '+974', country: 'Qatar', code: 'qa' },
+        { dialCode: '+7', country: 'Russia', code: 'ru' },
+        { dialCode: '+966', country: 'Saudi Arabia', code: 'sa' },
+        { dialCode: '+65', country: 'Singapore', code: 'sg' },
+        { dialCode: '+27', country: 'South Africa', code: 'za' },
+        { dialCode: '+82', country: 'South Korea', code: 'kr' },
+        { dialCode: '+34', country: 'Spain', code: 'es' },
+        { dialCode: '+94', country: 'Sri Lanka', code: 'lk' },
+        { dialCode: '+46', country: 'Sweden', code: 'se' },
+        { dialCode: '+41', country: 'Switzerland', code: 'ch' },
+        { dialCode: '+66', country: 'Thailand', code: 'th' },
+        { dialCode: '+90', country: 'Turkey', code: 'tr' },
+        { dialCode: '+971', country: 'United Arab Emirates', code: 'ae' },
+        { dialCode: '+44', country: 'United Kingdom', code: 'gb' },
+        { dialCode: '+1', country: 'United States', code: 'us' },
+        { dialCode: '+84', country: 'Vietnam', code: 'vn' },
     ],
 
     render: {
@@ -1365,7 +1415,7 @@ $(document).ready(function () {
       item: function(data, escape) {
         return `
           <div class="ts-selected-item">
-            <img src="${escape(data.flag)}" alt="${escape(data.country)}">
+            <img src="../country-code-flags/${data.code}.png" width="30" alt="${escape(data.country)}">
             <span>${escape(data.dialCode)}</span>
           </div>
         `;
@@ -1374,7 +1424,7 @@ $(document).ready(function () {
       option: function(data, escape) {
         return `
           <div class="ts-option-item">
-            <img src="${escape(data.flag)}" alt="${escape(data.country)}">
+            <img src="../country-code-flags/${data.code}.png" width="30" alt="${escape(data.country)}">
             <span class="ts-country-name">${escape(data.country)}</span>
             <span class="ts-country-code">${escape(data.dialCode)}</span>
           </div>
@@ -1390,29 +1440,54 @@ $(document).ready(function () {
     valueField: 'dialCode',
     labelField: 'dialCode',
     searchField: ['country', 'dialCode'],
-    items: ['+1'],          // Default selected — Canada (matching your screenshot)
+    items: ['+44'],          // Default selected — Canada (matching your screenshot)
     controlInput: null,     // Disable typing in control
 
-    options: [
-      { dialCode: '+61',  country: 'Australia',      flag: 'flags/aud.png' },
-      { dialCode: '+1',   country: 'Canada',         flag: 'flags/cad.png' },
-      { dialCode: '+86',  country: 'China',          flag: 'flags/cny.png' },
-      { dialCode: '+91',  country: 'India',          flag: 'flags/inr.png' },
-      { dialCode: '+81',  country: 'Japan',          flag: 'flags/jpy.png' },
-      { dialCode: '+60',  country: 'Malaysia',       flag: 'flags/myr.png' },
-      { dialCode: '+52',  country: 'Mexico',         flag: 'flags/mxn.png' },
-      { dialCode: '+64',  country: 'New Zealand',    flag: 'flags/nzd.png' },
-      { dialCode: '+63',  country: 'Philippines',    flag: 'flags/php.png' },
-      { dialCode: '+65',  country: 'Singapore',      flag: 'flags/sgd.png' },
-      { dialCode: '+27',  country: 'South Africa',   flag: 'flags/zar.png' },
-      { dialCode: '+82',  country: 'South Korea',    flag: 'flags/krw.png' },
-      { dialCode: '+46',  country: 'Sweden',         flag: 'flags/sek.png' },
-      { dialCode: '+41',  country: 'Switzerland',    flag: 'flags/chf.png' },
-      { dialCode: '+66',  country: 'Thailand',       flag: 'flags/thb.png' },
-      { dialCode: '+90',  country: 'Turkey',         flag: 'flags/try.png' },
-      { dialCode: '+971', country: 'UAE',            flag: 'flags/aed.png' },
-      { dialCode: '+1',   country: 'United States',  flag: 'flags/usd.png' },
-      { dialCode: '+84',  country: 'Vietnam',        flag: 'flags/vnd.png' },
+    options : [
+        { dialCode: '+93', country: 'Afghanistan', code: 'af' },
+        { dialCode: '+355', country: 'Albania', code: 'al' },
+        { dialCode: '+213', country: 'Algeria', code: 'dz' },
+        { dialCode: '+61', country: 'Australia', code: 'au' },
+        { dialCode: '+43', country: 'Austria', code: 'at' },
+        { dialCode: '+880', country: 'Bangladesh', code: 'bd' },
+        { dialCode: '+32', country: 'Belgium', code: 'be' },
+        { dialCode: '+55', country: 'Brazil', code: 'br' },
+        { dialCode: '+1', country: 'Canada', code: 'ca' },
+        { dialCode: '+86', country: 'China', code: 'cn' },
+        { dialCode: '+20', country: 'Egypt', code: 'eg' },
+        { dialCode: '+33', country: 'France', code: 'fr' },
+        { dialCode: '+49', country: 'Germany', code: 'de' },
+        { dialCode: '+91', country: 'India', code: 'in' },
+        { dialCode: '+62', country: 'Indonesia', code: 'id' },
+        { dialCode: '+353', country: 'Ireland', code: 'ie' },
+        { dialCode: '+972', country: 'Israel', code: 'il' },
+        { dialCode: '+39', country: 'Italy', code: 'it' },
+        { dialCode: '+81', country: 'Japan', code: 'jp' },
+        { dialCode: '+60', country: 'Malaysia', code: 'my' },
+        { dialCode: '+52', country: 'Mexico', code: 'mx' },
+        { dialCode: '+31', country: 'Netherlands', code: 'nl' },
+        { dialCode: '+64', country: 'New Zealand', code: 'nz' },
+        { dialCode: '+234', country: 'Nigeria', code: 'ng' },
+        { dialCode: '+92', country: 'Pakistan', code: 'pk' },
+        { dialCode: '+63', country: 'Philippines', code: 'ph' },
+        { dialCode: '+48', country: 'Poland', code: 'pl' },
+        { dialCode: '+351', country: 'Portugal', code: 'pt' },
+        { dialCode: '+974', country: 'Qatar', code: 'qa' },
+        { dialCode: '+7', country: 'Russia', code: 'ru' },
+        { dialCode: '+966', country: 'Saudi Arabia', code: 'sa' },
+        { dialCode: '+65', country: 'Singapore', code: 'sg' },
+        { dialCode: '+27', country: 'South Africa', code: 'za' },
+        { dialCode: '+82', country: 'South Korea', code: 'kr' },
+        { dialCode: '+34', country: 'Spain', code: 'es' },
+        { dialCode: '+94', country: 'Sri Lanka', code: 'lk' },
+        { dialCode: '+46', country: 'Sweden', code: 'se' },
+        { dialCode: '+41', country: 'Switzerland', code: 'ch' },
+        { dialCode: '+66', country: 'Thailand', code: 'th' },
+        { dialCode: '+90', country: 'Turkey', code: 'tr' },
+        { dialCode: '+971', country: 'United Arab Emirates', code: 'ae' },
+        { dialCode: '+44', country: 'United Kingdom', code: 'gb' },
+        { dialCode: '+1', country: 'United States', code: 'us' },
+        { dialCode: '+84', country: 'Vietnam', code: 'vn' },
     ],
 
     render: {
@@ -1420,7 +1495,7 @@ $(document).ready(function () {
       item: function(data, escape) {
         return `
           <div class="ts-selected-item">
-            <img src="${escape(data.flag)}" alt="${escape(data.country)}">
+            <img src="../country-code-flags/${data.code}.png" width="30" alt="${escape(data.country)}">
             <span>${escape(data.dialCode)}</span>
           </div>
         `;
@@ -1429,7 +1504,7 @@ $(document).ready(function () {
       option: function(data, escape) {
         return `
           <div class="ts-option-item">
-            <img src="${escape(data.flag)}" alt="${escape(data.country)}">
+            <img src="../country-code-flags/${data.code}.png" width="30" alt="${escape(data.country)}">
             <span class="ts-country-name">${escape(data.country)}</span>
             <span class="ts-country-code">${escape(data.dialCode)}</span>
           </div>
