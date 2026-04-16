@@ -10729,6 +10729,11 @@ h3 a:visited {
 .rw_form .form_tab .nav.nav-pills .nav-item:hover .nav-link span,
 .rw_form .form_tab .nav.nav-pills .nav-item .nav-link.active strong,
 .rw_form .form_tab .nav.nav-pills .nav-item .nav-link.active span{color:#FFF;}
+
+.rw_form .form_tab .nav.nav-pills .nav-item:hover .nav-link img,
+.rw_form .form_tab .nav.nav-pills .nav-item .nav-link.active img{filter: invert(0);}
+.rw_form .form_tab .nav.nav-pills .nav-item .nav-link img{filter: invert(1);}
+
 .rw_form .form_tab_body.tab-content > .active{display:flex;}
 .rw_form .form_tab_body{justify-content:center;align-items:center;flex-direction:column;width:100%;padding:0;margin: 0;}
 .rw_form .form_tab_body .arrow_down{display: block;width: 48px;margin: 0 auto;padding:0 0 75px 0;}
@@ -10828,7 +10833,7 @@ justify-content: center;transition: border-color 0.2s, background 0.2s;backgroun
 .rw_form .form_tab_body .form_content .sub_form_tab .tab-content .form_fields .form-group a{color:#2f057b;text-decoration:underline;}
 .rw_form .form_tab_body .form_content .sub_form_tab .tab-content .form_fields .form-group .checkbox-label {display: flex;align-items: center;gap: 10px;cursor: pointer;user-select: none;}
 .rw_form .form_tab_body .form_content .sub_form_tab .tab-content .form_fields .form-group .checkbox-label span {font-size: 15px;color: #1a1a2e;}
-.rw_form .form_tab_body .form_content .sub_form_tab .tab-content .form_fields .form-group .checkbox-label span.required.consent{display:block;width:100%;margin-bottom:0;font-size:16px;font-weight:500;color:#2f057b;line-height:1.2;text-transform:capitalize;}
+.rw_form .form_tab_body .form_content .sub_form_tab .tab-content .form_fields .form-group .checkbox-label span.required.consent{display:block;width:100%;margin-bottom:0;font-size:16px;font-weight:500;color:#2f057b;line-height:1.2;text-transform:none;}
 
 .rw_form .form_tab_body .form_content .sub_form_tab .tab-content .form_fields .form-group input[type="checkbox"] {display: none;}
 .rw_form .form_tab_body .form_content .sub_form_tab .tab-content .form_fields .form-group .checkbox-outer {width:30px;height:30px;border-radius: 5px;border: 2px solid #2f057b;display: flex;align-items: center;justify-content: center;transition: border-color 0.2s, background 0.2s;background: transparent;flex-shrink: 0;}
@@ -10965,7 +10970,7 @@ justify-content: center;transition: border-color 0.2s, background 0.2s;backgroun
 
 .rw_dashboard .sub_form_tab .tab-content .form_fields .form-group label{display:block;width:100%;margin-bottom:0;font-size:16px;font-weight:500;color:#2f057b;line-height:1;text-transform:capitalize;}
 .rw_dashboard .sub_form_tab .tab-content .form_fields .form-group label.consent{display:block;width:100%;margin-bottom:0;font-size:16px;font-weight:500;color:#2f057b;line-height:1.4;text-transform:none;}
-.rw_dashboard .sub_form_tab .tab-content .form_fields .form-group .checkbox-label span.required.consent{display:block;width:100%;margin-bottom:0;font-size:16px;font-weight:500;color:#2f057b;line-height:1.2;text-transform:capitalize;}
+.rw_dashboard .sub_form_tab .tab-content .form_fields .form-group .checkbox-label span.required.consent{display:block;width:100%;margin-bottom:0;font-size:16px;font-weight:500;color:#2f057b;line-height:1.2;text-transform:none;}
 .rw_dashboard .sub_form_tab .tab-content .form_fields .form-group .sub_title{display:block;width:100%;font-size:16px;font-weight:400;color:#2f057b;line-height:1;margin-top: 4px;margin-bottom:16px;}
 .rw_dashboard .sub_form_tab .tab-content .form_fields .form-group label.required::after {content: " *";color: red;}
 .rw_dashboard .sub_form_tab .tab-content .form_fields .form-group .form-control{display: flex;flex-direction: row;justify-content: space-between;align-items: center;padding:15px 24px 15px 24px;border-radius: 8px;border: solid 1px #cbd6f4;background-color:transparent;color:#2f057b;font-size: 16px;font-weight: 400;line-height: 1;flex:1;height: 50px !important;z-index:1;}
